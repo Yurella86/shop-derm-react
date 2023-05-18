@@ -41,6 +41,72 @@
             flex-basis: 25%;
             text-align: center;
             background-color: $test-bg;
+
+            .top-welcome {
+                font-size: 16px;
+                font-family: $ff-montserrat-ss;
+            }
+
+            .header-search {
+                margin-top: 10px;
+
+                input {
+                    line-height: 40px;
+                    padding: 0 45px;
+                    background-color: transparent;
+                    border: 1px solid;
+                    border-color: $hd-input-border;
+                }
+
+                .field.search {
+                    position: relative;
+                    margin: 0 20px;
+
+                    .search-content {
+                        position: absolute;
+                        opacity: 0;
+                        background-color: $test-bg;
+                        width: 100%;
+                        min-height: 300px;
+                        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+                        background-color: $test-bg;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                    .search {
+                        width: 100%;
+                        position: absolute;
+                        width: 42px;
+                        height: 42px;
+                        line-height: 40px;
+                        top: 0;
+                        left: 0;
+                        color: $hd-input-border;
+                        background-color: $test-bg;
+                    }
+
+                    .close {
+                        width: 100%;
+                        position: absolute;
+                        width: 42px;
+                        height: 42px;
+                        line-height: 40px;
+                        top: 0;
+                        right: 0;
+                        color: $hd-input-border;
+                        font-family: $ff-montserrat-ss;
+                        font-size: 18px;
+                        background-color: $test-bg;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: #333;
+                        }
+                    }
+                }
+            }
         }
 
         .right-column {

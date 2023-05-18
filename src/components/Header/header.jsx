@@ -21,7 +21,10 @@ function Header() {
                             <div className='header-search'>
                                 <form method="get" autoComplete="off">
                                     <div className='field search'>
-                                        <input type="text" />
+                                        <input type='text' placeholder="Enter Keyword or Item" >
+                                        </input>
+                                        <div className='search'>S</div>
+                                        <div className='close'>X</div>
                                         <div className='search-content'>
                                         </div>
                                     </div>
