@@ -1,0 +1,35 @@
+@import "../variables.scss";
+
+//background-color: $test-bg;
+
+.hd-nav-menu {
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: $test-bg;
+
+        li {
+            list-style: none;
+
+            &:not(:last-child)::after {
+                content: "|";
+                color: $hd-link-color;
+                padding: 0 5px;
+            }
+
+            a {
+                text-decoration: $hd-link-decoration;
+                color: $hd-link-color;
+                font-family: $ff-montserrat-ss;
+                font-weight: 600;
+                font-size: 14px;
+
+                &:hover {
+                    text-decoration: $hd-link-decoration-hover;
+                    color: $hd-link-color-hover;
+                }
+            }
+        }
+    }
+}

@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap");
+
+$test-bg: rgba(0, 0, 0, 0);
+
 $primary-color: #0d5257;
 $secondary-color: #06282b;
 $additional-color: #0d5257;
@@ -8,16 +12,28 @@ $custom-color1: #999;
 $custom-color2: #666;
 $custom-color3: #333;
 
-$link-color: #0d5257;
-$link-color-hover: #0d5257;
-
 // header
 $hd-bg: #fff;
 $hd-txt-color: #000;
-$hd-txt-color-bg: #fff;
+$hd-txt-color-bg: $hd-bg;
 $hd-link-color: #0d5257;
-$hd-link-color-bg: #fff;
-$hd-link-color-hover: #0d5257;
-$hd-link-color-hover-bg: #fff;
+$hd-link-color-bg: $hd-bg;
+$hd-link-color-hover: $custom-color1;
+$hd-link-color-bg: $hd-bg;
+$hd-link-color-bg-hover: $hd-bg;
 
+// link
+$link-color: #0d5257;
+$link-color-hover: $link-color;
+$link-font-weight: 400;
+$link-font-weight-hover: $link-font-weight;
+$hd-link-decoration: none;
+$hd-link-decoration-hover: $hd-link-decoration;
+
+// Paragraph
 $p-color: #0d5257;
+$p-color-bg: #fff;
+
+//Fonts
+$ff-montserrat-s: "Montserrat", serif;
+$ff-montserrat-ss: "Montserrat", sans-serif;
