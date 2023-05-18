@@ -4,13 +4,15 @@ $test-bg: rgba(0, 0, 0, 0);
 
 $primary-color: #0d5257;
 $secondary-color: #06282b;
-$additional-color: #0d5257;
+$additional-color: #2accbc;
 
 $light-color: #fff;
 $dark-color2: #000;
 $custom-color1: #999;
 $custom-color2: #666;
 $custom-color3: #333;
+
+$page-container: 1200px;
 
 // header
 $hd-bg: #fff;
@@ -21,6 +23,7 @@ $hd-link-color-bg: $hd-bg;
 $hd-link-color-hover: $custom-color1;
 $hd-link-color-bg: $hd-bg;
 $hd-link-color-bg-hover: $hd-bg;
+$hd-input-border: rgb(194, 194, 194);
 
 // link
 $link-color: #0d5257;

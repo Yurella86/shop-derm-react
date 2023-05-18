@@ -1,4 +1,4 @@
-// import '../style/extend.scss';
+import '../../style/extend.scss';
 import React, { useState } from 'react';
 
 function Categories({ items, onclickItem }) {

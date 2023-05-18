@@ -8,7 +8,7 @@ function Header() {
     return (
         <div className='header-container'>
             <div className='header-mob-container'>mob</div>
-            <div className='header-desk-container'>
+            <div className='page-wrapper header-desk-container'>
                 <div className='header-fl-container'>
                     <div className='hd-block left-column'>
                         <div className='logo-wrapper'>
@@ -21,7 +21,10 @@ function Header() {
                             <div className='header-search'>
                                 <form method="get" autoComplete="off">
                                     <div className='field search'>
-                                        <input type="text" />
+                                        <input type='text' placeholder="Enter Keyword or Item" >
+                                        </input>
+                                        <div className='search'>S</div>
+                                        <div className='close'>X</div>
                                         <div className='search-content'>
                                         </div>
                                     </div>
@@ -44,7 +47,7 @@ function Header() {
                     </div>
                 </div>
             </div>
-            <div className='nav-menu'>
+            <div className='main-menu'>
 
                 <Categories
                     onclickItem={(name) => console.log(name)}
