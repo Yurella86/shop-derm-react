@@ -12,9 +12,7 @@ function Header() {
                 <div className='header-fl-container'>
                     <div className='hd-block left-column'>
                         <div className='logo-wrapper'>
-                            <div className='logo'>
-                                <img src={logo} alt="Plastic Surgery and MedSpa" />
-                            </div>
+                            <img src={logo} alt="Plastic Surgery and MedSpa" />
                         </div>
                     </div>
                     <div className='hd-block central-column'>

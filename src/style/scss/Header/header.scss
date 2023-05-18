@@ -1,7 +1,16 @@
+@import "../variables.scss";
+
+// background-color: $test-bg;
+
 .header-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0px 20px;
+    background-color: $test-bg;
+
+    .header-desk-container {
+        padding: 10px 0;
+    }
 
     .header-fl-container {
         display: flex;
@@ -15,16 +24,29 @@
 
         .left-column {
             flex-basis: 30%;
+            background-color: $test-bg;
+
+            .logo-wrapper {
+                margin: 0 auto;
+                background-color: $test-bg;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
         }
 
         .central-column {
             flex-basis: 25%;
             text-align: center;
+            background-color: $test-bg;
         }
 
         .right-column {
-            flex-basis: 45%;
+            flex-basis: 40%;
             text-align: end;
+            background-color: $test-bg;
         }
 
         .hd-item {
