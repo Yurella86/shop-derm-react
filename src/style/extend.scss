@@ -1,1 +1,8 @@
 @import "./scss/Header/header.scss";
+@import "./scss/Header/nav_menu.scss";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}

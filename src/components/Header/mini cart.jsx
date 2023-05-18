@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import '../../style/extend.scss';
+import '../../style/extend.scss';
 
 function MiniCart() {
 
@@ -23,7 +23,7 @@ function MiniCart() {
 
             <div
                 className={`mini-cart-dropdown ${dropdown === true ? 'active' : ''}`}>
-                <div className='dropdown'>
+                <div className='dropdown'>eeeeeeeeeee
                 </div>
                 <div className='mini-cart-dropdown-content'>
                     <span>You can see some content</span>
