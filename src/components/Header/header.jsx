@@ -8,7 +8,7 @@ function Header() {
     return (
         <div className='header-container'>
             <div className='header-mob-container'>mob</div>
-            <div className='header-desk-container'>
+            <div className='page-wrapper header-desk-container'>
                 <div className='header-fl-container'>
                     <div className='hd-block left-column'>
                         <div className='logo-wrapper'>
@@ -47,7 +47,7 @@ function Header() {
                     </div>
                 </div>
             </div>
-            <div className='nav-menu'>
+            <div className='main-menu'>
 
                 <Categories
                     onclickItem={(name) => console.log(name)}

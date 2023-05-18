@@ -3,13 +3,16 @@
 // background-color: $test-bg;
 
 .header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0px 20px;
     background-color: $test-bg;
 
     .header-desk-container {
-        padding: 10px 0;
+        max-width: $page-container;
+        margin: 0 auto;
+        padding: 10px 20px;
+    }
+
+    .main-menu {
+        background-color: $primary-color;
     }
 
     .header-fl-container {

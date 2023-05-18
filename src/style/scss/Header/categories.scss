@@ -1,0 +1,45 @@
+@import "../variables.scss";
+
+.nav-categories {
+    max-width: 900px;
+    margin: 0 auto;
+    ul {
+        max-width: $page-container;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-family: $ff-montserrat-ss;
+        font-weight: 600;
+
+        li {
+            position: relative;
+            list-style: none;
+            line-height: 1.6;
+
+            a {
+                font-size: 16px;
+                line-height: 40px;
+                text-decoration: none;
+                color: #fff;
+                margin: 0 10px;
+            }
+
+            &:hover::after {
+                transition: width 1s;
+                width: 100%;
+            }
+
+            &::after {
+                content: " ";
+                position: absolute;
+                bottom: 0;
+                width: 0;
+                height: 3px;
+                display: flex;
+                flex-direction: column;
+                background-color: $additional-color;
+            }
+        }
+    }
+}
