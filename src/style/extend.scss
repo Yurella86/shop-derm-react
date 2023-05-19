@@ -1,9 +1,10 @@
+@import "./icomoon/style.css";
 @import "./scss/Header/header.scss";
 @import "./scss/Header/nav_menu.scss";
 @import "./scss/Header/categories.scss";
 @import "./scss/Header/compare.scss";
 @import "./scss/Header/mini\ cart.scss";
-@import "./icomoon/style.css";
+@import "./scss/Footer/footer.scss";
 
 * {
     padding: 0;
@@ -13,5 +14,9 @@
 
     ::placeholder {
         opacity: 0.3;
+    }
+
+    a {
+        text-decoration: none;
     }
 }
