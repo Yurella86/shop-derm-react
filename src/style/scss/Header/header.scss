@@ -46,6 +46,7 @@
             background-color: $test-bg;
 
             .top-welcome {
+                color: $hd-txt-color;
                 font-size: 16px;
                 font-family: $ff-montserrat-ss;
             }
@@ -116,6 +117,18 @@
             flex-basis: 40%;
             text-align: end;
             background-color: $test-bg;
+
+            .hd-right-icons {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                padding-right: 10px;
+                margin-top: 10px;
+                .item {
+                    position: relative;
+                    padding-left: 10px;
+                }
+            }
         }
 
         .hd-item {

@@ -1,9 +1,12 @@
 import React from 'react';
+import '../../style/extend.scss';
 
 function Compare() {
     return (
         <div className='item compare-wrapper'>
-            <div className='compare'>compare</div>
+            <div className='compare'>
+                <span class="icon icon-arrow-repeat">
+                </span></div>
         </div>
     );
 }
