@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Playfair+Display:wght@400;600;900&family=Roboto:wght@400;900&display=swap");
 
 $test-bg: rgba(0, 0, 0, 0);
 
@@ -16,13 +16,15 @@ $page-container: 1200px;
 
 // header
 $hd-bg: #fff;
-$hd-txt-color: #000;
+$hd-txt-color: #000000;
 $hd-txt-color-bg: $hd-bg;
 $hd-link-color: #0d5257;
 $hd-link-color-bg: $hd-bg;
 $hd-link-color-hover: $custom-color1;
 $hd-link-color-bg: $hd-bg;
 $hd-link-color-bg-hover: $hd-bg;
+$hd-link-decoration: none;
+$hd-link-decoration-hover: $hd-link-decoration;
 $hd-input-border: rgb(194, 194, 194);
 
 // link
@@ -30,8 +32,6 @@ $link-color: #0d5257;
 $link-color-hover: $link-color;
 $link-font-weight: 400;
 $link-font-weight-hover: $link-font-weight;
-$hd-link-decoration: none;
-$hd-link-decoration-hover: $hd-link-decoration;
 
 // Paragraph
 $p-color: #0d5257;
@@ -40,3 +40,7 @@ $p-color-bg: #fff;
 //Fonts
 $ff-montserrat-s: "Montserrat", serif;
 $ff-montserrat-ss: "Montserrat", sans-serif;
+$ff-playfairDisplay-s: "Playfair Display", serif;
+$ff-playfairDisplay-ss: "Playfair Display", sans-serif;
+$ff-roboto-s: "Roboto", serif;
+$ff-roboto-ss: "Roboto", sans-serif;

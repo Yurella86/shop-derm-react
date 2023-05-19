@@ -1,8 +1,6 @@
 import '../../style/extend.scss';
-import { Categories, MiniCart, Compare, HeaderNavMenu } from '..';
+import { Categories, MiniCart, Compare, HeaderNavMenu } from '../../components';
 import logo from '../../images/logo_mine.png';
-
-
 
 function Header() {
     return (
@@ -34,27 +32,25 @@ function Header() {
                     </div>
                     <div className='hd-block right-column'>
                         <div className='hd-item nav-wrapper'>
-
                             <HeaderNavMenu />
-
                             <div className='hd-right-icons'>
-
-                                <Compare />
-                                <MiniCart />
-
+                                <div className='item'>
+                                    <Compare />
+                                </div>
+                                <div className='item'>
+                                    <MiniCart />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div className='main-menu'>
-
                 <Categories
                     onclickItem={(name) => console.log(name)}
                     items={
                         ['Services', 'Products', 'Specials', 'E-Gift Card']
                     } />
-
             </div>
         </div>
     )
