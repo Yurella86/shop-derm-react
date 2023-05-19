@@ -1,11 +1,14 @@
 import React from 'react';
 import '../../style/extend.scss';
+import { Link } from 'react-router-dom';
 
 function HeaderNavMenu() {
     return (
         <div className='hd-nav-menu'>
             <ul>
-                <li><a href="#!">Account</a></li>
+                <Link to='/account'>
+                    <li>Account</li>
+                </Link>
                 <li><a href="#!">Wish List</a></li>
                 <li><a href="#!">Sign In</a></li>
                 <li><a href="#!">Sign Up</a></li>

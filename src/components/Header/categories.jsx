@@ -1,5 +1,6 @@
 import '../../style/extend.scss';
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Categories({ items, onclickItem }) {
 
@@ -15,12 +16,14 @@ function Categories({ items, onclickItem }) {
             <ul>
                 {
                     items.map((category, index) => (
-                        <li
-                            className={active === index ? 'active' : ''}
-                            key={`${category}_${index}`}
-                            onClick={() => onSelectItem(index)}>
-                            <a href="#!">{category}</a>
-                        </li>
+                        <Link to={`category/${category.replace(/\s+/g, '_').toLowerCase()}`}>
+                            <li
+                                className={active === index ? 'active' : ''}
+                                key={`${category}_${index}`}
+                                onClick={() => onSelectItem(index)}>
+                                <a href="#!">{category}</a>
+                            </li>
+                        </Link>
                     ))
                 }
             </ul>
