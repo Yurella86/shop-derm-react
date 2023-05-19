@@ -1,6 +1,7 @@
 import '../../style/extend.scss';
 import { Categories, MiniCart, Compare, HeaderNavMenu } from '../../components';
 import logo from '../../images/logo_mine.png';
+import { Link } from 'react-router-dom';
 
 function Header() {
     return (
@@ -9,9 +10,11 @@ function Header() {
             <div className='page-wrapper header-desk-container'>
                 <div className='header-fl-container'>
                     <div className='hd-block left-column'>
-                        <div className='logo-wrapper'>
-                            <img src={logo} alt="Plastic Surgery and MedSpa" />
-                        </div>
+                        <Link to='/'>
+                            <div className='logo-wrapper'>
+                                <img src={logo} alt="Plastic Surgery and MedSpa" />
+                            </div>
+                        </Link>
                     </div>
                     <div className='hd-block central-column'>
                         <div className='hd-item wrapper-central-column'>
@@ -49,7 +52,7 @@ function Header() {
                 <Categories
                     onclickItem={(name) => console.log(name)}
                     items={
-                        ['Services', 'Products', 'Specials', 'E-Gift Card']
+                        ['Services', 'Products', 'Specials', 'Gift Card']
                     } />
             </div>
         </div>
