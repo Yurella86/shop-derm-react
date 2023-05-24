@@ -18,6 +18,7 @@
     }
 
     a {
+        color: $link-color;
         text-decoration: none;
     }
 }
@@ -25,4 +26,8 @@
 .main-container {
     max-width: $page-container;
     margin: 0 auto;
+}
+
+main {
+    min-height: 500px;
 }
