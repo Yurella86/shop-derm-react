@@ -11,6 +11,7 @@
     margin: 0;
     box-sizing: border-box;
     outline: none;
+    font-family: $ff-montserrat-ss;
 
     ::placeholder {
         opacity: 0.3;
@@ -19,4 +20,9 @@
     a {
         text-decoration: none;
     }
+}
+
+.main-container {
+    max-width: $page-container;
+    margin: 0 auto;
 }
