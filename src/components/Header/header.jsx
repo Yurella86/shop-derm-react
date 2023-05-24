@@ -7,7 +7,7 @@ function Header() {
     return (
         <div className='header-container'>
             <div className='header-mob-container'>mob</div>
-            <div className='page-wrapper header-desk-container'>
+            <div className='main-container header-desk-container'>
                 <div className='header-fl-container'>
                     <div className='hd-block left-column'>
                         <Link to='/'>

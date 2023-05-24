@@ -1,5 +1,164 @@
 @import "../variables.scss";
 
 .footer-container {
-    color: red;
+    .footer-top-container {
+        background-color: $primary-color;
+        color: #fff;
+
+        .footer-top-flex {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 10px 20px;
+
+            ul {
+                li {
+                    display: list-item;
+                    list-style: none;
+                    float: left;
+                    padding: 5px 10px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    font-family: $ff-montserrat-s;
+                }
+            }
+
+            .item.item-right {
+                font-size: 32px;
+                line-height: 22px;
+            }
+        }
+    }
+
+    .footer-primary {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 20px 30px;
+
+        .newsletter-wrapper {
+            .label {
+                display: block;
+                margin: 10px auto;
+                font-size: 14px;
+            }
+
+            .field {
+                position: relative;
+                display: inline-block;
+                left: 1px;
+                &::before {
+                    position: absolute;
+                    content: "\e990";
+                    font-size: 35px;
+                    color: $custom-color1;
+                    font-weight: 200;
+                }
+                input {
+                    line-height: 1.4;
+                    font-size: 12px;
+                    height: 40px;
+                    padding-left: 40px;
+                }
+            }
+
+            .actions {
+                float: right;
+
+                .action.subscribe.primary {
+                    all: unset;
+                    line-height: 40px;
+                    padding: 0px 10px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    color: $button-color;
+                    background-color: $button-bg;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+
+                    &:hover {
+                        color: $button-color-hover;
+                        background-color: $button-bg-hover;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-secondary {
+        max-width: 1170px;
+        padding: 50px 0;
+        margin: 0 auto;
+        .footer-secondary-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            .block-title {
+                font-size: 18px;
+                font-weight: 600;
+                margin: 20px auto;
+            }
+
+            a {
+                font-size: 14px;
+                color: #000;
+
+                &:hover {
+                    color: $link-color-hover;
+                }
+
+                img {
+                    max-height: 70px;
+                }
+            }
+
+            .contacts {
+                position: relative;
+                width: 250px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                position: absolute;
+                float: right;
+                left: 45px;
+                top: 5px;
+                padding: 0;
+                padding-top: 5px;
+            }
+        }
+    }
+
+    .footer-bottom-container {
+        background-color: black;
+        padding: 10px 0;
+        position: relative;
+        bottom: 0;
+        .footer-bottom {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            .footer-copyright {
+                color: #fff;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .icon {
+        color: $social-link-color;
+        background-color: $social-link-bg-color;
+        font-size: 28px;
+        border-radius: 50%;
+        margin-top: 10px;
+        margin-right: 5px;
+        padding: 5px;
+        line-height: 50px;
+        &:hover {
+            color: $social-link-color-hover;
+            background-color: $social-link-bg-color-hover;
+        }
+    }
 }
