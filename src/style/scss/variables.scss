@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Playfair+Display:wght@400;600;900&family=Roboto:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600;700;900&family=Playfair+Display:wght@400;600;900&family=Roboto:wght@400;900&display=swap");
 
 $test-bg: rgba(0, 0, 0, 0);
 
@@ -27,11 +27,25 @@ $hd-link-decoration: none;
 $hd-link-decoration-hover: $hd-link-decoration;
 $hd-input-border: rgb(194, 194, 194);
 
+// button
+$button-color: #fff;
+$button-color-hover: #fff;
+$button-bg: #06282b;
+$button-bg-hover: #0d5257;
+$button-font-weight: 400;
+$button-font-weight-hover: $button-font-weight;
+
 // link
 $link-color: #0d5257;
 $link-color-hover: $link-color;
 $link-font-weight: 400;
 $link-font-weight-hover: $link-font-weight;
+
+// social link
+$social-link-color: #fff;
+$social-link-bg-color: #0d5257;
+$social-link-color-hover: $social-link-bg-color;
+$social-link-bg-color-hover: transparent;
 
 // Paragraph
 $p-color: #0d5257;
