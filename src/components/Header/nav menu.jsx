@@ -6,13 +6,11 @@ function HeaderNavMenu() {
     return (
         <div className='hd-nav-menu'>
             <ul>
-                <Link to='/account'>
-                    <li>Account</li>
-                </Link>
-                <li><a href="#!">Wish List</a></li>
-                <li><a href="#!">Sign In</a></li>
-                <li><a href="#!">Sign Up</a></li>
-                <li><a href="#!">Back to Website</a></li>
+                <li><Link to='/account'><span>Account</span></Link></li>
+                <li><Link to='/wish_list'><span>Wish List</span></Link></li>
+                <li><Link to='/sign_in'><span>Sign In</span></Link></li>
+                <li><Link to='/sign_up'><span>Sign Up</span></Link></li>
+                <li><Link to='/back_to_website'><span>Back to Website</span></Link></li>
             </ul>
         </div>
     );
