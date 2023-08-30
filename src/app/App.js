@@ -2,46 +2,17 @@
 import { Route, Routes } from 'react-router-dom';
 import { Header, Home, Cart, ComparePage, CategoryPage, Account, Footer } from '../components'
 import '../style/extend.scss'
-import ProductContext from '../store/product-context';
-import { useState } from 'react';
-import productImage from '../images/products/jeuveau-sku_31.jpg'
+import CartProvider from '../store/cart-provider';
 
 function App() {
 
-  const [products, setProducts] = useState(
-    [
-      {
-        image: productImage,
-        name: 'Jeuveau® By the Unit',
-        price: 1.6
-      },
-      {
-        name: 'secound',
-        price: 23.6
-      },
-      {
-        name: 'Third',
-        price: 55
-      },
-      {
-        name: 'Forth',
-        price: 4243
-      },
-      {
-        name: 'Forth',
-        price: 4243
-      }
-    ]
-  )
-
   return (
-    <ProductContext.Provider value={products}>
+    <CartProvider>
       <div className="body-container">
         <div id='top'></div>
         <div className='button-to-top'>
           <a href='#top'><span className='icon icon-chevron-right'></span></a>
         </div>
-
 
         <Header />
 
@@ -58,7 +29,7 @@ function App() {
         <Footer />
 
       </div>
-    </ProductContext.Provider>
+    </CartProvider>
   );
 }
 

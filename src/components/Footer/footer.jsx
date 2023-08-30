@@ -33,7 +33,7 @@ const Footer = () => {
                         <div className='footer-primary-right'>
                             <div className='newsletter-wrapper'>
                                 <div className='content'>
-                                    <label className='label' for="newsletter">
+                                    <label className='label' htmlFor="newsletter">
                                         <span>Sign up for news & special offers!</span>
                                     </label>
                                     <div className='field newsletter icon-mail'>

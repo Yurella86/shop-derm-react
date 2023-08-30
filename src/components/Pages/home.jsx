@@ -6,7 +6,7 @@ import MyContext from '../../store/product-context';
 const Home = () => {
 
     const productCtx = useContext(MyContext)
-    const itemsOfProducts = productCtx.map((item) => <Bestsellers image={item.image} name={item.name} price={item.price} />)
+    const itemsOfProducts = productCtx.items.map((item) => <Bestsellers key={item.id} image={item.image} name={item.name} price={item.price} />)
 
     return (
         <div>

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import '../../../style/extend.scss';
 import { Link } from 'react-router-dom';
+import CartPopap from './cartPopap';
 
 function MiniCart() {
     const [dropdown, senDropdown] = useState(false)
+    const [isItem, senIsItem] = useState(true)
 
     function handleHover() {
         senDropdown(true);
@@ -23,7 +25,8 @@ function MiniCart() {
                     <div
                         className={`mini-cart-dropdown ${dropdown === true ? 'active' : ''}`}>
                         <div className='mini-cart-dropdown-content'>
-                            <span>You can see some content</span>
+                            {!isItem && <span>You have no items in cart</span>}
+                            {isItem && <CartPopap />}
                         </div>
                     </div>
                     <span className={`icon icon-shopping-cart`}>

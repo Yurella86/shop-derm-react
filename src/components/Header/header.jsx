@@ -2,8 +2,12 @@ import '../../style/extend.scss';
 import { Categories, MiniCart, Compare, HeaderNavMenu } from '../../components';
 import logo from '../../images/logo_mine.png';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 function Header() {
+
+    const [category, setCategory] = useState(['Services', 'Products', 'Specials', 'Gift Card'])
+
     return (
         <div className='header-container'>
             <div className='header-mob-container'>mob</div>
@@ -54,10 +58,7 @@ function Header() {
             </div>
             <div className='main-menu'>
                 <Categories
-                    onclickItem={(name) => console.log(name)}
-                    items={
-                        ['Services', 'Products', 'Specials', 'Gift Card']
-                    } />
+                    items={category} />
             </div>
         </div>
     )

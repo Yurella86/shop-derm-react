@@ -2,13 +2,12 @@ import '../../../style/extend.scss';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-function Categories({ items, onclickItem }) {
+function Categories({ items }) {
 
     const [active, setActive] = useState()
 
     const onSelectItem = (index) => {
         setActive(index)
-        onclickItem(items[index])
     }
 
     return (
