@@ -4,6 +4,12 @@ import logo from '../../images/logo_mine.png';
 import { Link } from 'react-router-dom';
 
 function Header() {
+<<<<<<< Updated upstream
+=======
+
+    const [category] = useState(['Services', 'Products', 'Specials', 'Gift Card'])
+
+>>>>>>> Stashed changes
     return (
         <div className='header-container'>
             <div className='header-mob-container'>mob</div>

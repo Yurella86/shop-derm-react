@@ -1,8 +1,21 @@
+<<<<<<< Updated upstream
 import React from 'react';
 import banner from '../../images/banners/banner 4.jpg'
 import productImage from '../../images/products/jeuveau-sku_31.jpg'
 
 const Home = () => {
+=======
+import React, { useState } from 'react';
+import Banners from '../Mine/Banners/banners';
+import ProductTubs from '../Mine/Home Tabs/productTubs';
+
+const Home = () => {
+
+    const [stateTab, setStateTab] = useState('bestsellers')
+
+
+
+>>>>>>> Stashed changes
     return (
         <div>
             {/* <section className="slide-wrapper">
@@ -22,16 +35,22 @@ const Home = () => {
                 section 2
             </section> */}
 
+<<<<<<< Updated upstream
             <section className='banners'>
                 <img src={banner} alt="banner" />
             </section>
+=======
+            <Banners />
+
+>>>>>>> Stashed changes
             <section className='main-container horizontal-tab'>
                 <ul className='tabs-nav'>
-                    <li className='tabs-state'><a href="#tab-1">Bestsellers</a></li>
-                    <li className='tabs-state'><a href="#tab-2">This Month's Specials</a></li>
-                    <li className='tabs-state'><a href="#tab-3">Staff Favorites</a></li>
+                    <li className='tabs-state' onClick={() => setStateTab('bestsellers')} ><span>Bestsellers</span></li>
+                    <li className='tabs-state' onClick={() => setStateTab('monthsSpecials')} ><span>This Month's Specials</span></li>
+                    <li className='tabs-state' onClick={() => setStateTab('staffFavorites')} ><span>Staff Favorites</span></li>
                 </ul>
                 <hr />
+<<<<<<< Updated upstream
                 <div id='tab-1' className='r-tabs-panel'>
                     <div className="products-wrapper">
                         <ul className='items'>
@@ -64,7 +83,11 @@ const Home = () => {
                 <div id='tab-3' className='r-tabs-panel'>tab-3</div> */}
 
 
+=======
+                {stateTab && <ProductTubs categoryTub={stateTab} />}
+>>>>>>> Stashed changes
             </section>
+
         </div>
     );
 };

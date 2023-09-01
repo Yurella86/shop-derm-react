@@ -19,7 +19,9 @@
             width: fit-content;
             margin: 0 1px;
             background-color: $button-bg;
-            a {
+
+            span {
+                cursor: pointer;
                 display: inline-block;
                 font-size: 16px;
                 font-weight: 400;
@@ -45,7 +47,12 @@
 
             .product-item {
                 max-width: 160px;
+<<<<<<< Updated upstream
                 min-height: 400px;
+=======
+                min-width: 160px;
+                min-height: 300px;
+>>>>>>> Stashed changes
                 overflow: hidden;
                 position: relative;
 
@@ -54,6 +61,10 @@
 
                     img {
                         width: 100%;
+<<<<<<< Updated upstream
+=======
+                        min-height: 120px;
+>>>>>>> Stashed changes
                     }
 
                     .icons {
@@ -81,7 +92,7 @@
                 .product-item-info {
                     text-align: center;
                     .product-title {
-                        font-size: 16px;
+                        font-size: 14px;
                         font-weight: 400;
                         text-transform: uppercase;
                     }
@@ -135,4 +146,22 @@
     &:hover {
         background-color: $secondary-color;
     }
+}
+
+.loading-product {
+    text-align: center;
+    font-size: 26px;
+    margin: 50px auto;
+    color: #0d5257;
+}
+
+.wrong-product {
+    text-align: center;
+    img {
+        width: 300px;
+    }
+}
+
+.errorMessage {
+    color: red;
 }
