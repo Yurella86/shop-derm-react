@@ -19,7 +19,9 @@
             width: fit-content;
             margin: 0 1px;
             background-color: $button-bg;
-            a {
+
+            span {
+                cursor: pointer;
                 display: inline-block;
                 font-size: 16px;
                 font-weight: 400;
@@ -35,8 +37,6 @@
         padding: 50px 20px;
 
         .products-wrapper {
-            display: flex;
-            flex-direction: row;
             padding: 0 20px;
         }
 
@@ -44,22 +44,20 @@
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
-            overflow-x: auto;
 
             .product-item {
-                max-width: 160px;
-                min-width: 160px;
-                min-height: 330px;
+                width: 140px;
+                min-height: 300px;
                 overflow: hidden;
                 position: relative;
-                padding: 0 20px;
+                margin: 0 10px;
 
                 .product-item-img {
                     position: relative;
 
                     img {
                         width: 100%;
-                        min-height: 150px;
+                        min-height: 120px;
                     }
 
                     .icons {
@@ -89,7 +87,7 @@
                 .product-item-info {
                     text-align: center;
                     .product-title {
-                        font-size: 16px;
+                        font-size: 14px;
                         font-weight: 400;
                         text-transform: uppercase;
                     }
@@ -143,4 +141,22 @@
     &:hover {
         background-color: $secondary-color;
     }
+}
+
+.loading-product {
+    text-align: center;
+    font-size: 26px;
+    margin: 50px auto;
+    color: #0d5257;
+}
+
+.wrong-product {
+    text-align: center;
+    img {
+        width: 300px;
+    }
+}
+
+.errorMessage {
+    color: red;
 }
