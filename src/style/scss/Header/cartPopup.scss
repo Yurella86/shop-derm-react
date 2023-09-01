@@ -1,0 +1,47 @@
+.popup-wrapper {
+    margin: 5px;
+    color: black;
+
+    hr {
+        color: gray;
+        opacity: 0.2;
+    }
+}
+
+.item-wrapper {
+    min-width: 350px;
+}
+
+.total-wrapper {
+    margin: 5px 5px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-basis: 100px;
+}
+
+.total-items,
+.wrapper-total-price {
+    flex-basis: 130px;
+}
+
+.total-items {
+    line-height: 38px;
+}
+
+.wrapper-total-price {
+    text-align: end;
+}
+
+.delete-item::before {
+    .icon-delete:before {
+        content: "\e91c";
+    }
+}
+
+.wrapper-button {
+    button {
+        width: 100%;
+        height: 50px;
+    }
+}
