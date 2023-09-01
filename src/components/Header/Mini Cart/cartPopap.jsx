@@ -1,31 +1,40 @@
 import React, { Fragment } from 'react';
+import '../../../style/extend.scss';
+import ItemOfCart from './itemOfCart';
+import { useContext } from 'react';
+import CartContext from '../../../store/cartContext';
 
-const CartPopap = () => {
+const CartPopup = () => {
+    const cartCtx = useContext(CartContext)
+
+    const arrItemsInCart = cartCtx.items.map((item) =>
+        <ItemOfCart
+            image={item.image}
+            name={item.name}
+            price={item.price}
+        />)
+    const totalItems = cartCtx.items.length
+    const totalPrice = cartCtx.totalAmount
+
+
+
+
     return (
         <Fragment>
-            <div className='pop-ap-wrapper'>
-                <div className='pop-ap-items'>
+            <div className='popup-wrapper'>
+                <div className='popup-items'>
 
-                    <div className='flex-box-items'>
-                        <img src="#" alt="product image" />
-                    </div>
+                    {arrItemsInCart}
 
-                    <div className='item-description'>
-                        <div className='title'>Some Title</div>
-                        <div className='price'>Price: <strong>000</strong></div>
-                        <div className='quantity'>
-                            <label htmlFor="qty">Qty</label>
-                            <input type="number" name="qty" id="qty" />
-                        </div>
-                    </div>
-
+                    <hr />
                     <div className='total-wrapper'>
                         <div className='total-items'>
-                            Number of items: <span><strong>999</strong></span>
+                            <span><strong>{totalItems}</strong> </span>
+                            Item in Cart
                         </div>
                         <div className='wrapper-total-price'>
-                            <div className='total-title'>Total:</div>
-                            <div className='total-prise'>$0000</div>
+                            <div className='total-title'>Total price:</div>
+                            <div className='total-prise'><strong>{totalPrice}$</strong></div>
                         </div>
                     </div>
 
@@ -35,13 +44,10 @@ const CartPopap = () => {
                         </button>
                     </div>
                 </div>
-                <div>
-
-                </div>
 
             </div>
         </Fragment>
     );
 };
 
-export default CartPopap;
+export default CartPopup;

@@ -1,77 +1,51 @@
 import React, { useReducer } from 'react';
-import ProductContext from './product-context';
-import productImage from '../images/products/jeuveau-sku_31.jpg'
+import CartContext from './cartContext';
 
 const defaultCartState = {
-    items: [
-        {
-            id: 1,
-            image: productImage,
-            name: 'Jeuveau® By the Unit',
-            price: 1.6
-        },
-        {
-            id: 2,
-            name: 'secound',
-            price: 23.6
-        },
-        {
-            id: 3,
-            name: 'Third',
-            price: 55
-        },
-        {
-            id: 4,
-            name: 'Forth',
-            price: 4243
-        },
-        {
-            id: 5,
-            name: 'Forth',
-            price: 4243
-        }
-    ],
+    items: [],
     totalAmount: 0,
 }
-
 const cartReducer = (state, action) => {
-    if (action.type === 'ADDITEM') {
 
+    if (action.type === 'ADD') { // додаємо новий обєкт в корзину
+        const existingItem = state.items.find(item => item.name === action.items.name); //перевірка пошуку такого самого елемента в корзині
+        if (existingItem) {
+            return state //якщо перевірка пройшла на додавання такого самого обєкту state вертаєм дефолтний
+        }
+        const updateItems = state.items.concat(action.items) // зєднання старого масиву items і нового
+        const updateTotalAmount = parseInt(state.totalAmount) + parseInt(action.items.price) // оновлення загальної ціни
+        return { // вертаємо новий обєкт в state
+            items: updateItems,
+            totalAmount: updateTotalAmount.toFixed(2)
+        }
     }
-    if (action.type === 'REMOVEITEM') {
+    if (action.type === 'REMOVE') { // видаляємо обєкт з корзини
 
     }
     return defaultCartState
 }
 
-
 const CartProvider = (props) => {
-    const [cartstate, dispatchAction] = useReducer(cartReducer, defaultCartState)
+    const [cartState, dispatchAction] = useReducer(cartReducer, defaultCartState)
 
     const addToCart = (item) => {
-        dispatchAction({
-            type: 'ADDITEM',
-            item: item
-        })
+        dispatchAction({ type: 'ADD', items: item })
     };
     const removeFromCart = (id) => {
-        dispatchAction({
-            type: 'REMOVEITEM',
-            id: id
-        })
+        dispatchAction({ type: 'REMOVE', id: id })
     };
 
-    const products = {
-        items: cartstate.items,
-        totalAmount: cartstate.totalAmount,
+    const cartProducts = {
+        items: cartState.items,
+        totalAmount: cartState.totalAmount,
         addItem: addToCart,
         removeItem: removeFromCart
     }
 
     return (
-        <ProductContext.Provider value={products}>
+        <CartContext.Provider value={cartProducts}>
             {props.children}
-        </ProductContext.Provider>
+        </CartContext.Provider>
     );
 };
 
