@@ -35,6 +35,8 @@
         padding: 50px 20px;
 
         .products-wrapper {
+            display: flex;
+            flex-direction: row;
             padding: 0 20px;
         }
 
@@ -42,18 +44,22 @@
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
+            overflow-x: auto;
 
             .product-item {
                 max-width: 160px;
-                min-height: 400px;
+                min-width: 160px;
+                min-height: 330px;
                 overflow: hidden;
                 position: relative;
+                padding: 0 20px;
 
                 .product-item-img {
                     position: relative;
 
                     img {
                         width: 100%;
+                        min-height: 150px;
                     }
 
                     .icons {
@@ -63,7 +69,9 @@
                         right: 3px;
                         transform: translateX(80px);
                         opacity: 0;
-                        transition: all 300ms ease-in-out 0ms, opacity 440ms ease-in-out 0ms;
+                        transition:
+                            all 300ms ease-in-out 0ms,
+                            opacity 440ms ease-in-out 0ms;
 
                         .wish-list {
                             margin-right: 5px;
