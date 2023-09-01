@@ -1,0 +1,32 @@
+.flex-box-item {
+    display: flex;
+    flex-direction: row;
+
+    .item-image img {
+        max-width: 70px;
+    }
+
+    .description {
+        margin: 10px;
+
+        .title {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .price {
+            font-size: 14px;
+        }
+
+        .quantity input {
+            width: 50px;
+            margin-left: 10px;
+        }
+    }
+
+    .item-actions {
+        flex: auto;
+        margin: 10px;
+        text-align: end;
+    }
+}
