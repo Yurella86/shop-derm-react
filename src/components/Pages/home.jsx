@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ProductTubs from '../Mine/Home Tabs/productTubs';
+import Banners from '../Mine/Banners/banners';
 
 const Home = () => {
 
@@ -23,6 +24,7 @@ const Home = () => {
             <section className="tabs-wrapper">
                 section 2
             </section> */}
+            <Banners />
 
             <section className='main-container horizontal-tab'>
                 <ul className='tabs-nav'>
