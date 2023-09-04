@@ -33,8 +33,9 @@
     text-align: end;
 }
 
-.delete-item::before {
-    .icon-delete:before {
+.delete-item {
+    .icon-delete::before {
+        font-size: 22px;
         content: "\e91c";
     }
 }

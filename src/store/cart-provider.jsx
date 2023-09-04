@@ -21,6 +21,22 @@ const cartReducer = (state, action) => {
     }
     if (action.type === 'REMOVE') { // видаляємо обєкт з корзини
 
+        function findToPrice() {
+            let newPrice;
+            state.items.forEach(element => {
+                if (element.id === action.id) {
+                    newPrice = state.totalAmount - element.price
+                }
+            });
+            return newPrice.toFixed(2)
+        }
+
+        const filteredArray = state.items.filter(item => item.id !== action.id);
+        const updateTotalAmount = findToPrice()
+        return {
+            items: filteredArray,
+            totalAmount: updateTotalAmount
+        }
     }
     return defaultCartState
 }
