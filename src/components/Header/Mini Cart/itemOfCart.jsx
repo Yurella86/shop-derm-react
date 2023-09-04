@@ -3,7 +3,7 @@ import '../../../style/extend.scss';
 
 const ItemOfCart = ({ id, image, price, name, deleteItem }) => {
 
-    const [quantity, setQuantity] = useState(1)
+    const [quantity, setQuantity] = useState()
 
     function deleteHandleItem() {
         deleteItem(id)
