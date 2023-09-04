@@ -7,11 +7,17 @@ import CartContext from '../../../store/cartContext';
 const CartPopup = () => {
     const cartCtx = useContext(CartContext)
 
+    function handelDeleteItem(idItem) {
+        cartCtx.removeItem(idItem)
+    }
+
     const arrItemsInCart = cartCtx.items.map((item) =>
         <ItemOfCart
+            id={item.id}
             image={item.image}
             name={item.name}
             price={item.price}
+            deleteItem={(idItem) => handelDeleteItem(idItem)}
         />)
     const totalItems = cartCtx.items.length
     const totalPrice = cartCtx.totalAmount

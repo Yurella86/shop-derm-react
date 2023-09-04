@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import '../../../style/extend.scss';
 
-const ItemOfCart = ({ image, price, name }) => {
+const ItemOfCart = ({ id, image, price, name, deleteItem }) => {
 
-    const [quantity, setQuantity] = useState(1)
+    const [quantity, setQuantity] = useState()
 
-    function deleteHandleItem(params) {
-
+    function deleteHandleItem() {
+        deleteItem(id)
     }
 
     return (
