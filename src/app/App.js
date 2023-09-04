@@ -2,10 +2,6 @@
 import { Route, Routes } from 'react-router-dom';
 import {
   Header,
-  Categories,
-  MiniCart,
-  Compare,
-  HeaderNavMenu,
   Home,
   Cart,
   ComparePage,
@@ -19,6 +15,7 @@ import {
 import '../style/extend.scss'
 import CartProvider from '../store/cart-provider';
 import ProductProvider from '../store/ProductApi/productProvider';
+import Banners from '../components/Mine/Banners/banners';
 
 
 function App() {
@@ -32,7 +29,6 @@ function App() {
           </div>
 
           <Header />
-
           <main>
             <Routes>
               <Route path='/' element={<Home />} />
