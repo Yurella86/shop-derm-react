@@ -6,7 +6,10 @@ import HeaderNavMenu from './Header/nav menu';
 import Home from './Pages/home';
 import Cart from './Pages/cart';
 import ComparePage from './Pages/compare';
-import CategoryPage from './Pages/category';
+import Services from './Pages/Category/services';
+import Products from './Pages/Category/products';
+import Specials from './Pages/Category/specials';
+import GiftCard from './Pages/Category/gift-card';
 import Account from './Pages/account';
 import Footer from "./Footer/footer";
 
@@ -19,7 +22,10 @@ export {
     Home,
     Cart,
     ComparePage,
-    CategoryPage,
+    Services,
+    Products,
+    Specials,
+    GiftCard,
     Account,
     Footer
 };
