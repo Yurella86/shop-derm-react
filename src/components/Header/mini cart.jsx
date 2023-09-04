@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import '../../style/extend.scss';
-import CartPopup from './Mini Cart/cartPopap';
+import CartPopup from './Mini Cart/cartPopup';
 import CartContext from '../../store/cartContext';
 
 function MiniCart() {
@@ -12,8 +12,10 @@ function MiniCart() {
     useEffect(() => {
         if (cartCtx.items.length > 0) {
             setIsItem(true)
-            setCounterOfItems(cartCtx.items.length)
+        } else {
+            setIsItem(false)
         }
+        setCounterOfItems(cartCtx.items.length)
     }, [cartCtx])
 
     return (
