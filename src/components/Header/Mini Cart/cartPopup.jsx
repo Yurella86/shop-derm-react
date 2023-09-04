@@ -29,9 +29,9 @@ const CartPopup = () => {
         <Fragment>
             <div className='popup-wrapper'>
                 <div className='popup-items'>
-
-                    {arrItemsInCart}
-
+                    <div className="popup-items-wrapper">
+                        {arrItemsInCart}
+                    </div>
                     <hr />
                     <div className='total-wrapper'>
                         <div className='total-items'>
