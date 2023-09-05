@@ -35,7 +35,7 @@ function App() {
               <Route path='/cart' element={<Cart />} />
               <Route path='/compare' element={<ComparePage />} />
               <Route exact path='/category/services' element={<Services />} />
-              <Route exact path='/category/products' element={<Products />} />
+              <Route exact path='/category/all_products' element={<Products />} />
               <Route exact path='/category/specials' element={<Specials />} />
               <Route exact path='/category/gift_card' element={<GiftCard />} />
               <Route exact path='/account' element={<Account />} />

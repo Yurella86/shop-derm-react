@@ -24,6 +24,13 @@
             transition: all 0.3s ease;
         }
     }
+
+    .title-category {
+        color: $head-color-h1;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-weight: 300;
+        font-size: 40px;
+    }
 }
 
 .breadcrumbs {

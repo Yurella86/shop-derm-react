@@ -19,13 +19,13 @@ const Products = () => {
         <Fragment>
             <div className='main-container'>
                 <div className='grid-container'>
-                    <div className='breadcrumbs'>Category / Products</div>
+                    <div className='breadcrumbs'>Category / <strong>Products</strong></div>
                     <div className='nav-bar'>
                         <div>navigation</div>
                     </div>
                     <div className='content-products'>
                         <div className="wrapper-category">
-                            <h1 className='title-category' style={{ 'width': 'fit-content' }}>Products</h1>
+                            <h1 className='title-category'>All Products</h1>
                             <div className="navigation">navigation</div>
                             <hr />
                             <div className="products-wrapper">
