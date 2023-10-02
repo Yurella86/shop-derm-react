@@ -30,6 +30,12 @@
                 text-transform: uppercase;
                 color: $button-color;
             }
+
+            &:hover,
+            &.active {
+                background-color: $button-bg-hover;
+                box-shadow: 0px 0px 20px -7px $button-bg-hover;
+            }
         }
     }
 
