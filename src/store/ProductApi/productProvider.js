@@ -24,7 +24,7 @@ const ProductProvider = (props) => {
                     selling: data[key].selling
                 })
             }
-            setTimeout(() => setProducts(loadedProducts), 2000)
+            setTimeout(() => setProducts(loadedProducts), 1000)
         }
 
         fetchProducts().catch((err) => {
