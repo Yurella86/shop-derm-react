@@ -7,7 +7,7 @@ const ProductProvider = (props) => {
     useEffect(() => {
         const fetchProducts = async () => {
             const loadedProducts = []
-            const response = await fetch('https://606efbdf0c054f001765814c.mockapi.io/api/v1/products')
+            const response = await fetch('https://products-bb720-default-rtdb.firebaseio.com/products.json')
             if (!response.ok) {
                 setProducts([])
                 throw new Error('something wrong with Api')
