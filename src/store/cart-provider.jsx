@@ -7,19 +7,19 @@ const defaultCartState = {
 }
 const cartReducer = (state, action) => {
 
-    if (action.type === 'ADD') { // додаємо новий обєкт в корзину
-        const existingItem = state.items.find(item => item.name === action.items.name); //перевірка пошуку такого самого елемента в корзині
+    if (action.type === 'ADD') { // add a new object to the cart
+        const existingItem = state.items.find(item => item.name === action.items.name); //checking to find the same item in the shopping cart
         if (existingItem) {
-            return state //якщо перевірка пройшла на додавання такого самого обєкту state вертаєм дефолтний
+            return state //if the check was passed on adding the same state object, the default is returned
         }
-        const updateItems = state.items.concat(action.items) // зєднання старого масиву items і нового
-        const updateTotalAmount = parseInt(state.totalAmount) + parseInt(action.items.price) // оновлення загальної ціни
-        return { // вертаємо новий обєкт в state
+        const updateItems = state.items.concat(action.items) // connection of the old items array and the new one
+        const updateTotalAmount = parseInt(state.totalAmount) + parseInt(action.items.price) // updating the total price
+        return { // return the new object to state
             items: updateItems,
             totalAmount: updateTotalAmount.toFixed(2)
         }
     }
-    if (action.type === 'REMOVE') { // видаляємо обєкт з корзини
+    if (action.type === 'REMOVE') { // remove the object from the basket
 
         function findToPrice() {
             let newPrice;
