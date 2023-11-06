@@ -8,6 +8,11 @@
     }
 }
 
+.popup-items-wrapper {
+    max-height: 320px;
+    overflow-y: auto;
+}
+
 .item-wrapper {
     min-width: 350px;
 }
@@ -34,8 +39,8 @@
 }
 
 .delete-item {
-    .icon-delete::before {
-        font-size: 22px;
+    .item-actions.item-actions::before {
+        font-size: 20px;
         content: "\e91c";
     }
 }

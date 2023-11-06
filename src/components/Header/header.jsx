@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 function Header() {
 
-    const [category] = useState(['Services', 'Products', 'Specials', 'Gift Card'])
+    const [category] = useState(['Services', 'All Products', 'Specials', 'Gift Card'])
 
     return (
         <div className='header-container'>
@@ -55,9 +55,7 @@ function Header() {
             <div className='main-menu'>
                 <Categories
                     onclickItem={(name) => console.log(name)}
-                    items={
-                        ['Services', 'Products', 'Specials', 'Gift Card']
-                    } />
+                    items={category} />
             </div>
         </div>
     )
