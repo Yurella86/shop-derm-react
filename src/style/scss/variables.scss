@@ -2,9 +2,9 @@
 
 $test-bg: rgba(0, 0, 0, 0);
 
-$primary-color: #0d5257;
-$secondary-color: #06282b;
-$additional-color: #2accbc;
+$primary-color: #060a2b;
+$secondary-color: #192697;
+$additional-color: rgb(96, 110, 235);
 
 $light-color: #fff;
 $dark-color2: #000;
@@ -36,20 +36,20 @@ $hd-input-border: rgb(194, 194, 194);
 // button
 $button-color: #fff;
 $button-color-hover: #fff;
-$button-bg: #0d5257;
-$button-bg-hover: #06282b;
+$button-bg: $secondary-color;
+$button-bg-hover: $primary-color;
 $button-font-weight: 400;
 $button-font-weight-hover: $button-font-weight;
 
 // link
-$link-color: #0d5257;
+$link-color: $secondary-color;
 $link-color-hover: $link-color;
 $link-font-weight: 400;
 $link-font-weight-hover: $link-font-weight;
 
 // social link
 $social-link-color: #fff;
-$social-link-bg-color: #0d5257;
+$social-link-bg-color: $secondary-color;
 $social-link-color-hover: $social-link-bg-color;
 $social-link-bg-color-hover: transparent;
 
