@@ -8,6 +8,7 @@
         flex-direction: row;
         justify-content: flex-end;
         background-color: $test-bg;
+        flex-wrap: wrap;
 
         li {
             list-style: none;
