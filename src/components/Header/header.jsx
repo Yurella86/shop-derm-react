@@ -13,9 +13,7 @@ function Header() {
             <div className='header-mob-container'>
                 <div className='logo-wrapper'>
                     <Link to='/'>
-
                         <img src={logo} alt="Plastic Surgery and MedSpa" />
-
                     </Link>
                 </div>
             </div>
@@ -61,9 +59,22 @@ function Header() {
                 </div>
             </div>
             <div className='main-menu'>
-                <Categories
-                    onclickItem={(name) => console.log(name)}
-                    items={category} />
+                <div className='desk-main-menu'>
+                    <Categories
+                        onclickItem={(name) => console.log(name)}
+                        items={category} />
+                </div>
+                <div class="mob-main-menu">
+                    <div className='wrapper-mob-menu'>
+                        <div className='flex-hr-container'>
+                            <div className="item">burger</div>
+                            <div className="item">search</div>
+                            <div className="item">user</div>
+                            <div className="item">compare</div>
+                            <div className="item">cart</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
