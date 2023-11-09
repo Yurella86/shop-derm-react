@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <div className='footer-container'>
             <div className='footer-top-container'>
-                <div className='main-container footer-top-flex'>
+                <div className='flex-hr-container'>
                     <div className='item item-left'>
                         <ul className='links'>
                             <li>Search Terms</li>
