@@ -134,6 +134,15 @@
             margin: 20px auto;
         }
     }
+
+    .header-mob-container {
+        background-color: $primary-color;
+        text-align: center;
+
+        .logo-wrapper {
+            padding: 20px;
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {

@@ -10,7 +10,15 @@ function Header() {
 
     return (
         <div className='header-container'>
-            <div className='header-mob-container'>mob</div>
+            <div className='header-mob-container'>
+                <div className='logo-wrapper'>
+                    <Link to='/'>
+
+                        <img src={logo} alt="Plastic Surgery and MedSpa" />
+
+                    </Link>
+                </div>
+            </div>
             <div className='main-container header-desk-container'>
                 <div className='header-fl-container'>
                     <div className='hd-block left-column'>
