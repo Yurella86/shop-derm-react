@@ -5,7 +5,7 @@
         background-color: $primary-color;
         color: #fff;
 
-        .footer-top-flex {
+        .flex-hr-container {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -163,6 +163,36 @@
         &:hover {
             color: $social-link-color-hover;
             background-color: $social-link-bg-color-hover;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-top-container {
+        .flex-hr-container {
+            .item-left {
+                display: flex;
+                flex-basis: 100%;
+                justify-content: space-around;
+            }
+            .item-right {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 485px) {
+    .footer-top-container {
+        .flex-hr-container {
+            .links {
+                display: flex;
+                flex-direction: column;
+
+                li {
+                    text-align: center;
+                }
+            }
         }
     }
 }
