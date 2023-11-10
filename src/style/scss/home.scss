@@ -59,6 +59,8 @@
         overflow: hidden;
         position: relative;
         margin: 0 10px;
+        display: flex;
+        flex-shrink: 0;
 
         .product-item-img {
             position: relative;
@@ -165,4 +167,14 @@
 
 .errorMessage {
     color: red;
+}
+
+@media screen and (max-width: 768px) {
+    .horizontal-tab .tabs-nav .tabs-state {
+        text-align: center;
+
+        span {
+            font-size: 12px;
+        }
+    }
 }
