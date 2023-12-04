@@ -9,6 +9,7 @@
 @import "./scss/Footer/footer.scss";
 @import "./scss/home.scss";
 @import "./scss/Pages/products.scss";
+@import "./scss/Pages/checkout.scss";
 
 * {
     padding: 0;
@@ -59,5 +60,11 @@ button {
 .flex-hr-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex-vr-container {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }

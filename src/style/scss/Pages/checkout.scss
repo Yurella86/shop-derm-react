@@ -1,0 +1,28 @@
+.wrapper-checkout {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px;
+
+    .flex-vr-container {
+        min-height: 200px;
+    }
+
+    label {
+        display: block;
+        width: 200px;
+    }
+
+    input {
+        width: 100%;
+        line-height: 2;
+    }
+
+    .btns {
+        text-align: end;
+    }
+
+    .btn {
+        padding: 5px 10px;
+        margin-left: 10px;
+    }
+}
