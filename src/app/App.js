@@ -10,12 +10,15 @@ import {
   Specials,
   GiftCard,
   Account,
-  Footer
+  Footer,
+  Authentication
 } from '../components'
 import '../style/extend.scss'
 import CartProvider from '../store/cart-provider';
 import ProductProvider from '../store/ProductApi/productProvider';
-import Banners from '../components/Mine/Banners/banners';
+// import Banners from '../components/Mine/Banners/banners';
+
+
 
 
 function App() {
@@ -39,6 +42,7 @@ function App() {
               <Route exact path='/category/specials' element={<Specials />} />
               <Route exact path='/category/gift_card' element={<GiftCard />} />
               <Route exact path='/account' element={<Account />} />
+              <Route exact path='/auth' element={<Authentication />} />
             </Routes>
           </main>
 

@@ -3,6 +3,7 @@ import '../../../style/extend.scss';
 import ItemOfCart from './itemOfCart';
 import { useContext } from 'react';
 import CartContext from '../../../store/cartContext';
+import { Link } from 'react-router-dom';
 
 const CartPopup = () => {
     const cartCtx = useContext(CartContext)
@@ -46,7 +47,7 @@ const CartPopup = () => {
 
                     <div className='wrapper-button'>
                         <button>
-                            <span>Go to Checkout</span>
+                            <Link to="/checkout">Go to Checkout</Link>
                         </button>
                     </div>
                 </div>

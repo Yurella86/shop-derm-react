@@ -2,7 +2,7 @@ import Header from "./Header/header";
 import Categories from "./Header/categories";
 import MiniCart from './Header/mini cart';
 import Compare from './Header/compare';
-import HeaderNavMenu from './Header/nav menu';
+import HeaderNavMenu from './Header/Header Nav Menu/nav menu';
 import Home from './Pages/home';
 import Cart from './Pages/cart';
 import ComparePage from './Pages/compare';
@@ -12,6 +12,8 @@ import Specials from './Pages/Category/specials';
 import GiftCard from './Pages/Category/gift-card';
 import Account from './Pages/account';
 import Footer from "./Footer/footer";
+import Authentication from "./Pages/authentication";
+
 
 export {
     Header,
@@ -27,5 +29,6 @@ export {
     Specials,
     GiftCard,
     Account,
-    Footer
+    Footer,
+    Authentication
 };
