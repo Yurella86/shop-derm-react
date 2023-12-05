@@ -28,7 +28,7 @@ const ItemOfCart = ({ id, image, price, name, deleteItem }) => {
 
                 <div className='item-actions'>
                     <div className='delete-item'>
-                        <span class="icon-delete" onClick={deleteHandleItem}></span>
+                        <span className="icon-delete" onClick={deleteHandleItem}></span>
                     </div>
                 </div>
             </section>

@@ -1,6 +1,8 @@
 import React from 'react';
 import '../../style/extend.scss';
 import { Form } from 'react-router-dom';
+import Header from '../Header/header';
+import Footer from '../Footer/footer';
 
 const Authentication = () => {
     return (

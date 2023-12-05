@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ProductTubs from '../Mine/Home Tabs/productTubs';
 import Banners from '../Mine/Banners/banners';
 
-const Home = () => {
+const HomeContent = () => {
 
     const [stateTab, setStateTab] = useState('bestsellers');
 
@@ -22,4 +22,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default HomeContent;

@@ -64,7 +64,7 @@ function Header() {
                         onclickItem={(name) => console.log(name)}
                         items={category} />
                 </div>
-                <div class="mob-main-menu">
+                <div className="mob-main-menu">
                     <div className='wrapper-mob-menu'>
                         <div className='flex-hr-container'>
                             <div className="item">burger</div>
