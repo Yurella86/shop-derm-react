@@ -16,14 +16,12 @@ function Categories({ items, onclickItem }) {
             <ul>
                 {
                     items.map((category, index) => (
-                        <Link to={`category/${category.replace(/\s+/g, '_').toLowerCase()}`}>
-                            <li
-                                className={active === index ? 'active' : ''}
-                                key={`${category}_${index}`}
-                                onClick={() => onSelectItem(index)}>
-                                <a href="#!">{category}</a>
-                            </li>
-                        </Link>
+                        <li
+                            className={active === index ? 'active' : ''}
+                            key={`${category}_${index}`}
+                            onClick={() => onSelectItem(index)}>
+                            <Link to={`category/${category.replace(/\s+/g, '_').toLowerCase()}`}>{category}</Link>
+                        </li>
                     ))
                 }
             </ul>
