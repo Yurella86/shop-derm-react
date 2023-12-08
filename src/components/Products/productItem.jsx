@@ -1,10 +1,13 @@
 import React, { useContext } from 'react';
 import CartContext from '../../store/cartContext';
+import CompareContext from '../../store/ComparePage/compareContext';
 
 
 const ProductItem = ({ id, image, name, price, categoryTub }) => {
 
     const ctx = useContext(CartContext)
+    const ctxCompare = useContext(CompareContext)
+
 
     const addToCartHandler = () => {
         ctx.addItem({
@@ -12,6 +15,16 @@ const ProductItem = ({ id, image, name, price, categoryTub }) => {
             image: image,
             name: name,
             price: price,
+        })
+    }
+
+    const addToCompareHandler = () => {
+        ctxCompare.addToCompare({
+            id: id,
+            image: image,
+            name: name,
+            price: price,
+            article: 'art'
         })
     }
 
@@ -25,7 +38,7 @@ const ProductItem = ({ id, image, name, price, categoryTub }) => {
                             <span className="icon icon-heart"></span>
                         </div>
                         <div className='compare'>
-                            <span className="icon icon-arrow-repeat"></span>
+                            <span className="icon icon-arrow-repeat" onClick={addToCompareHandler}></span>
                         </div>
                     </div>
                 </div>

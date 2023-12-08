@@ -5,7 +5,7 @@ import Compare from './Header/compare';
 import HeaderNavMenu from './Header/Header Nav Menu/nav menu';
 import Home from './Pages/home';
 import Cart from './Pages/cart';
-import ComparePage from './Pages/compare';
+import ComparePage from './Pages/ComparePage/comparePage';
 import Services from './Pages/Category/services';
 import Products from './Pages/Category/products';
 import Specials from './Pages/Category/specials';

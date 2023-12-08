@@ -16,6 +16,7 @@ import ProductProvider from '../store/ProductApi/productProvider';
 import { Fragment } from 'react';
 import HomePage from '../components/Pages/HomePage/homePage';
 import RootLayout from '../components/root/RootLayout';
+import CompareProvider from '../store/ComparePage/compare';
 
 const router = createBrowserRouter([
   {
@@ -44,13 +45,15 @@ const router = createBrowserRouter([
 function App() {
   return (
     <Fragment>
-      <ProductProvider>
-        <CartProvider>
-          <div className="body-container">
-            <RouterProvider router={router} />
-          </div>
-        </CartProvider>
-      </ProductProvider>
+      <CompareProvider>
+        <ProductProvider>
+          <CartProvider>
+            <div className="body-container">
+              <RouterProvider router={router} />
+            </div>
+          </CartProvider>
+        </ProductProvider>
+      </CompareProvider>
     </Fragment>
   );
 }
