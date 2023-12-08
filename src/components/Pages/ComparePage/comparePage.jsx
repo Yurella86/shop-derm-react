@@ -6,7 +6,7 @@ import CompareItem from './compareItem';
 const ComparePage = () => {
     const ctxCompare = useContext(CompareContext)
 
-    console.log(ctxCompare.items);
+    console.log(!!ctxCompare.items);
 
     const items = ctxCompare.items.map(item =>
         <CompareItem
@@ -23,7 +23,7 @@ const ComparePage = () => {
             <h1 style={{ 'width': 'fit-content', 'margin': '0 auto' }}>Compare</h1>
             <div className='wrapper-compare-content'>
                 <div className="flex-hr-container">
-                    {items}
+                    {!!items.length ? items : <div>Dont have Items</div>}
                 </div>
             </div>
 
