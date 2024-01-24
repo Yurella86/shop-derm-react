@@ -18,7 +18,7 @@
         .tabs-state {
             width: fit-content;
             margin: 0 1px;
-            background-color: $button-bg;
+            // background-color: $button-bg;
 
             span {
                 cursor: pointer;
@@ -31,11 +31,11 @@
                 color: $button-color;
             }
 
-            &:hover,
-            &.active {
-                background-color: $button-bg-hover;
-                box-shadow: 0px 0px 20px -7px $button-bg-hover;
-            }
+            // &:hover,
+            // &.active {
+            //     background-color: $button-bg-hover;
+            //     box-shadow: 0px 0px 20px -7px $button-bg-hover;
+            // }
         }
     }
 
