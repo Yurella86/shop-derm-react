@@ -44,27 +44,10 @@ const useAdminApi = () => {
         }
     };
 
-    const updateDataAccent = (element, newValue) => {
-        console.log("element => " + element);
-        console.log("newValue => " + newValue);
+    const handleUpdateState = (element, newValue) => {
         setDataConfig((prevConfig) => ({
             ...prevConfig,
-            accentColor: {
-                ...prevConfig.accentColor,
-                [element]: newValue,
-            },
-        }));
-    };
-
-    const updateDataHeader = (element, newValue) => {
-        console.log("element => " + element);
-        console.log("newValue => " + newValue);
-        setDataConfig((prevConfig) => ({
-            ...prevConfig,
-            header: {
-                ...prevConfig.header,
-                [element]: newValue,
-            },
+            [element]: newValue,
         }));
     };
 
@@ -75,8 +58,7 @@ const useAdminApi = () => {
     return {
         dataConfig,
         updateData,
-        updateDataAccent,
-        updateDataHeader,
+        handleUpdateState,
     };
 };
 

@@ -17,8 +17,8 @@
     ol {
         font-size: 12px;
 
-        li {
-            font-size: 14;
+        li > * {
+            font-size: 12px;
             margin: 10px;
         }
     }
@@ -64,5 +64,37 @@
 
     label {
         padding-left: 2px;
+    }
+}
+
+.header-configuration,
+.link-configuration,
+.buttons-configuration {
+    strong {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 300px;
+    }
+    strong:nth-child(2n) {
+        background-color: rgba(223, 223, 223, 0.753);
+    }
+    input {
+        text-align: end;
+        height: auto;
+        font-size: 12px;
+        font-weight: 600;
+    }
+}
+
+.example-buttons {
+    max-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+
+    button {
+        margin: 5px 5px 0;
     }
 }
