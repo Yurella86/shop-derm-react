@@ -6,14 +6,17 @@ import useAdminApi from "../../store/admin/adminApi";
 
 const HomeContent = () => {
     const [stateTab, setStateTab] = useState("bestsellers");
-    const {configuration, fetchData, getColor} = useAdminApi();
+    const {dataConfig} = useAdminApi();
 
     const TabsNav = styled.li`
-        background-color: #333333};
+        background-color: ${dataConfig ? dataConfig.accentPrimary : "#e60000"}
+        };
 
         &:hover,
         &.active {
-            background-color: #333333;
+            background-color: ${
+                dataConfig ? dataConfig.accentSecondary : "#e60000"
+            };
         }
     `;
 
