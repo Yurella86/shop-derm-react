@@ -8,15 +8,20 @@ const HomeContent = () => {
     const [stateTab, setStateTab] = useState("bestsellers");
     const {dataConfig} = useAdminApi();
 
+    if (!dataConfig) {
+        return <></>;
+    }
+
     const TabsNav = styled.li`
-        background-color: ${dataConfig ? dataConfig.accentPrimary : "#e60000"}
-        };
+        background-color: ${dataConfig.homeTabsBackground};
+        color: ${dataConfig.homeTabsColor};
+        text-transform: ${dataConfig.homeTabsTextTransform};
+        font-size: ${dataConfig.homeTabsFontSize};
 
         &:hover,
         &.active {
-            background-color: ${
-                dataConfig ? dataConfig.accentSecondary : "#e60000"
-            };
+            background-color: ${dataConfig.homeTabsBackgroundHover};
+            color: ${dataConfig.homeTabsColorHover};
         }
     `;
 
