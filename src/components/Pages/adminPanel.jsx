@@ -11,7 +11,7 @@ const AdminPanel = () => {
         updateData();
     };
 
-    const handleApdateData = (e) => {
+    const handleUpdateData = (e) => {
         handleUpdateState(e.target.name, e.target.value);
     };
 
@@ -24,7 +24,7 @@ const AdminPanel = () => {
             <form onSubmit={handleSubmit}>
                 <h1>Admin panel</h1>
                 <ol>
-                    <li>
+                    <li className="accent-config">
                         Accent colors:
                         <section className="accent-colors">
                             <div className="box">
@@ -33,13 +33,13 @@ const AdminPanel = () => {
                                     type="color"
                                     id="accentPrimary"
                                     name="accentPrimary"
-                                    onChange={handleApdateData}
+                                    onChange={handleUpdateData}
                                     value={dataConfig.accentPrimary}
                                 />
                                 <input
                                     type="text"
                                     name="accentPrimary"
-                                    onChange={handleApdateData}
+                                    onChange={handleUpdateData}
                                     value={dataConfig.accentPrimary}
                                 />
                             </div>
@@ -49,13 +49,13 @@ const AdminPanel = () => {
                                     type="color"
                                     id="accentSecondary"
                                     name="accentSecondary"
-                                    onChange={handleApdateData}
+                                    onChange={handleUpdateData}
                                     value={dataConfig.accentSecondary}
                                 />
                                 <input
                                     type="text"
                                     name="accentSecondary"
-                                    onChange={handleApdateData}
+                                    onChange={handleUpdateData}
                                     value={dataConfig.accentSecondary}
                                 />
                             </div>
@@ -65,20 +65,590 @@ const AdminPanel = () => {
                                     type="color"
                                     id="accentAdditional"
                                     name="accentAdditional"
-                                    onChange={handleApdateData}
+                                    onChange={handleUpdateData}
                                     value={dataConfig.accentAdditional}
                                 />
                                 <input
                                     type="text"
                                     name="accentAdditional"
-                                    onChange={handleApdateData}
+                                    onChange={handleUpdateData}
                                     value={dataConfig.accentAdditional}
+                                />
+                            </div>
+                            <div className="box">
+                                <label htmlFor="customColor1">Custom 1</label>
+                                <input
+                                    type="color"
+                                    id="customColor1"
+                                    name="customColor1"
+                                    onChange={handleUpdateData}
+                                    value={dataConfig.customColor1}
+                                />
+                                <input
+                                    type="text"
+                                    name="customColor1"
+                                    onChange={handleUpdateData}
+                                    value={dataConfig.customColor1}
+                                />
+                            </div>
+                            <div className="box">
+                                <label htmlFor="customColor2">Custom 2</label>
+                                <input
+                                    type="color"
+                                    id="customColor2"
+                                    name="customColor2"
+                                    onChange={handleUpdateData}
+                                    value={dataConfig.customColor2}
+                                />
+                                <input
+                                    type="text"
+                                    name="customColor2"
+                                    onChange={handleUpdateData}
+                                    value={dataConfig.customColor2}
+                                />
+                            </div>
+                            <div className="box">
+                                <label htmlFor="customColor3">Custom 3</label>
+                                <input
+                                    type="color"
+                                    id="customColor3"
+                                    name="customColor3"
+                                    onChange={handleUpdateData}
+                                    value={dataConfig.customColor3}
+                                />
+                                <input
+                                    type="text"
+                                    name="customColor3"
+                                    onChange={handleUpdateData}
+                                    value={dataConfig.customColor3}
                                 />
                             </div>
                         </section>
                     </li>
-                    <li>
-                        General text, link<strong>{`<a>`}</strong>, and list
+                    <li className="heading-config">
+                        Heading Text:
+                        <section className="heading-configuration">
+                            <h1
+                                className="heading-text"
+                                style={{
+                                    color: `${dataConfig.h1headingColor}`,
+                                    fontSize: `${dataConfig.h1headingFontSize}`,
+                                    fontWeight: `${dataConfig.h1headingFontWeight}`,
+                                    fontFamily: `${dataConfig.h1headingFontFamily}`,
+                                    textTransform: `${dataConfig.h1headingTextTransform}`,
+                                    lineHeight: `${dataConfig.h1headingLineHeight}`,
+                                }}
+                            >
+                                {"<h1> "}heading
+                            </h1>
+                            <div className="config">
+                                <strong>
+                                    color:
+                                    <div>
+                                        <input
+                                            type="text"
+                                            size={inputWidth}
+                                            name="h1headingColor"
+                                            onChange={handleUpdateData}
+                                            value={dataConfig.h1headingColor}
+                                        />
+                                        <input
+                                            type="color"
+                                            id="h1headingColor"
+                                            name="h1headingColor"
+                                            onChange={handleUpdateData}
+                                            value={dataConfig.h1headingColor}
+                                        />
+                                    </div>
+                                </strong>
+                                <strong>
+                                    font-size:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h1headingFontSize"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.h1headingFontSize}
+                                    />
+                                </strong>
+                                <strong>
+                                    font-weight:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h1headingFontWeight"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.h1headingFontWeight}
+                                    />
+                                </strong>
+                                <strong>
+                                    font-family:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h1headingFontFamily"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.h1headingFontFamily}
+                                    />
+                                </strong>
+                                <strong>
+                                    text-transform:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h1headingTextTransform"
+                                        onChange={handleUpdateData}
+                                        value={
+                                            dataConfig.h1headingTextTransform
+                                        }
+                                    />
+                                </strong>
+                                <strong>
+                                    line-height:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h1headingLineHeight"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.h1headingLineHeight}
+                                    />
+                                </strong>
+                            </div>
+                            <h2
+                                className="heading-text"
+                                style={{
+                                    color: `${dataConfig.h2headingColor}`,
+                                    fontSize: `${dataConfig.h2headingFontSize}`,
+                                    fontWeight: `${dataConfig.h2headingFontWeight}`,
+                                    fontFamily: `${dataConfig.h2headingFontFamily}`,
+                                    textTransform: `${dataConfig.h2headingTextTransform}`,
+                                    lineHeight: `${dataConfig.h2headingLineHeight}`,
+                                }}
+                            >
+                                {"<h2> "} heading
+                            </h2>
+                            <div className="config">
+                                <strong>
+                                    color:
+                                    <div>
+                                        <input
+                                            type="text"
+                                            size={inputWidth}
+                                            name="h2headingColor"
+                                            onChange={handleUpdateData}
+                                            value={dataConfig.h2headingColor}
+                                        />
+                                        <input
+                                            type="color"
+                                            id="h2headingColor"
+                                            name="h2headingColor"
+                                            onChange={handleUpdateData}
+                                            value={dataConfig.h2headingColor}
+                                        />
+                                    </div>
+                                </strong>
+                                <strong>
+                                    font-size:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h2headingFontSize"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.h2headingFontSize}
+                                    />
+                                </strong>
+                                <strong>
+                                    font-weight:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h2headingFontWeight"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.h2headingFontWeight}
+                                    />
+                                </strong>
+                                <strong>
+                                    font-family:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h2headingFontFamily"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.h2headingFontFamily}
+                                    />
+                                </strong>
+                                <strong>
+                                    text-transform:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h2headingTextTransform"
+                                        onChange={handleUpdateData}
+                                        value={
+                                            dataConfig.h2headingTextTransform
+                                        }
+                                    />
+                                </strong>
+                                <strong>
+                                    line-height:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h2headingLineHeight"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.h2headingLineHeight}
+                                    />
+                                </strong>
+                            </div>
+                            <h3
+                                className="heading-text"
+                                style={{
+                                    color: `${dataConfig.h3headingColor}`,
+                                    fontSize: `${dataConfig.h3headingFontSize}`,
+                                    fontWeight: `${dataConfig.h3headingFontWeight}`,
+                                    fontFamily: `${dataConfig.h3headingFontFamily}`,
+                                    textTransform: `${dataConfig.h3headingTextTransform}`,
+                                    lineHeight: `${dataConfig.h3headingLineHeight}`,
+                                }}
+                            >
+                                {"<h3> "} heading
+                            </h3>
+                            <div className="config">
+                                <strong>
+                                    color:
+                                    <div>
+                                        <input
+                                            type="text"
+                                            size={inputWidth}
+                                            name="h3headingColor"
+                                            onChange={handleUpdateData}
+                                            value={dataConfig.h3headingColor}
+                                        />
+                                        <input
+                                            type="color"
+                                            id="h3headingColor"
+                                            name="h3headingColor"
+                                            onChange={handleUpdateData}
+                                            value={dataConfig.h3headingColor}
+                                        />
+                                    </div>
+                                </strong>
+                                <strong>
+                                    font-size:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h3headingFontSize"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.h3headingFontSize}
+                                    />
+                                </strong>
+                                <strong>
+                                    font-weight:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h3headingFontWeight"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.h3headingFontWeight}
+                                    />
+                                </strong>
+                                <strong>
+                                    font-family:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h3headingFontFamily"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.h3headingFontFamily}
+                                    />
+                                </strong>
+                                <strong>
+                                    text-transform:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h3headingTextTransform"
+                                        onChange={handleUpdateData}
+                                        value={
+                                            dataConfig.h3headingTextTransform
+                                        }
+                                    />
+                                </strong>
+                                <strong>
+                                    line-height:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h3headingLineHeight"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.h3headingLineHeight}
+                                    />
+                                </strong>
+                            </div>
+                            <h4
+                                className="heading-text"
+                                style={{
+                                    color: `${dataConfig.h4headingColor}`,
+                                    fontSize: `${dataConfig.h4headingFontSize}`,
+                                    fontWeight: `${dataConfig.h4headingFontWeight}`,
+                                    fontFamily: `${dataConfig.h4headingFontFamily}`,
+                                    textTransform: `${dataConfig.h4headingTextTransform}`,
+                                    lineHeight: `${dataConfig.h4headingLineHeight}`,
+                                }}
+                            >
+                                {"<h4> "} heading
+                            </h4>
+                            <div className="config">
+                                <strong>
+                                    color:
+                                    <div>
+                                        <input
+                                            type="text"
+                                            size={inputWidth}
+                                            name="h4headingColor"
+                                            onChange={handleUpdateData}
+                                            value={dataConfig.h4headingColor}
+                                        />
+                                        <input
+                                            type="color"
+                                            id="h4headingColor"
+                                            name="h4headingColor"
+                                            onChange={handleUpdateData}
+                                            value={dataConfig.h4headingColor}
+                                        />
+                                    </div>
+                                </strong>
+                                <strong>
+                                    font-size:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h4headingFontSize"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.h4headingFontSize}
+                                    />
+                                </strong>
+                                <strong>
+                                    font-weight:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h4headingFontWeight"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.h4headingFontWeight}
+                                    />
+                                </strong>
+                                <strong>
+                                    font-family:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h4headingFontFamily"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.h4headingFontFamily}
+                                    />
+                                </strong>
+                                <strong>
+                                    text-transform:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h4headingTextTransform"
+                                        onChange={handleUpdateData}
+                                        value={
+                                            dataConfig.h4headingTextTransform
+                                        }
+                                    />
+                                </strong>
+                                <strong>
+                                    line-height:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h4headingLineHeight"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.h4headingLineHeight}
+                                    />
+                                </strong>
+                            </div>
+                            <h5
+                                className="heading-text"
+                                style={{
+                                    color: `${dataConfig.h5headingColor}`,
+                                    fontSize: `${dataConfig.h5headingFontSize}`,
+                                    fontWeight: `${dataConfig.h5headingFontWeight}`,
+                                    fontFamily: `${dataConfig.h5headingFontFamily}`,
+                                    textTransform: `${dataConfig.h5headingTextTransform}`,
+                                    lineHeight: `${dataConfig.h5headingLineHeight}`,
+                                }}
+                            >
+                                {"<h5> "} heading
+                            </h5>
+                            <div className="config">
+                                <strong>
+                                    color:
+                                    <div>
+                                        <input
+                                            type="text"
+                                            size={inputWidth}
+                                            name="h5headingColor"
+                                            onChange={handleUpdateData}
+                                            value={dataConfig.h5headingColor}
+                                        />
+                                        <input
+                                            type="color"
+                                            id="h5headingColor"
+                                            name="h5headingColor"
+                                            onChange={handleUpdateData}
+                                            value={dataConfig.h5headingColor}
+                                        />
+                                    </div>
+                                </strong>
+                                <strong>
+                                    font-size:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h5headingFontSize"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.h5headingFontSize}
+                                    />
+                                </strong>
+                                <strong>
+                                    font-weight:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h5headingFontWeight"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.h5headingFontWeight}
+                                    />
+                                </strong>
+                                <strong>
+                                    font-family:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h5headingFontFamily"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.h5headingFontFamily}
+                                    />
+                                </strong>
+                                <strong>
+                                    text-transform:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h5headingTextTransform"
+                                        onChange={handleUpdateData}
+                                        value={
+                                            dataConfig.h5headingTextTransform
+                                        }
+                                    />
+                                </strong>
+                                <strong>
+                                    line-height:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h5headingLineHeight"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.h5headingLineHeight}
+                                    />
+                                </strong>
+                            </div>
+                            <h6
+                                className="heading-text"
+                                style={{
+                                    color: `${dataConfig.h6headingColor}`,
+                                    fontSize: `${dataConfig.h6headingFontSize}`,
+                                    fontWeight: `${dataConfig.h6headingFontWeight}`,
+                                    fontFamily: `${dataConfig.h6headingFontFamily}`,
+                                    textTransform: `${dataConfig.h6headingTextTransform}`,
+                                    lineHeight: `${dataConfig.h6headingLineHeight}`,
+                                }}
+                            >
+                                {"<h6> "} text example
+                            </h6>
+                            <div className="config">
+                                <strong>
+                                    color:
+                                    <div>
+                                        <input
+                                            type="text"
+                                            size={inputWidth}
+                                            name="h6headingColor"
+                                            onChange={handleUpdateData}
+                                            value={dataConfig.h6headingColor}
+                                        />
+                                        <input
+                                            type="color"
+                                            id="h6headingColor"
+                                            name="h6headingColor"
+                                            onChange={handleUpdateData}
+                                            value={dataConfig.h6headingColor}
+                                        />
+                                    </div>
+                                </strong>
+                                <strong>
+                                    font-size:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h6headingFontSize"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.h6headingFontSize}
+                                    />
+                                </strong>
+                                <strong>
+                                    font-weight:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h6headingFontWeight"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.h6headingFontWeight}
+                                    />
+                                </strong>
+                                <strong>
+                                    font-family:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h6headingFontFamily"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.h6headingFontFamily}
+                                    />
+                                </strong>
+                                <strong>
+                                    text-transform:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h6headingTextTransform"
+                                        onChange={handleUpdateData}
+                                        value={
+                                            dataConfig.h6headingTextTransform
+                                        }
+                                    />
+                                </strong>
+                                <strong>
+                                    line-height:
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="h6headingLineHeight"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.h6headingLineHeight}
+                                    />
+                                </strong>
+                            </div>
+                        </section>
+                    </li>
+                    <li className="general-config">
+                        General <b>text</b>, link<strong>{`<a>`}</strong>, and
+                        list
                         <strong>{`<li>`}</strong> configuration
                         <section className="link-configuration">
                             <div
@@ -110,35 +680,62 @@ const AdminPanel = () => {
                             </div>
                             <br />
                             <strong>
-                                text-color:
-                                <input
-                                    type="text"
-                                    size={inputWidth}
-                                    name="textColor"
-                                    onChange={handleApdateData}
-                                    value={dataConfig.textColor}
-                                />
+                                color:
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="textColor"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.textColor}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="textColor"
+                                        name="textColor"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.textColor}
+                                    />
+                                </div>
                             </strong>
                             <br />
                             <strong>
                                 link-color:
-                                <input
-                                    type="text"
-                                    size={inputWidth}
-                                    name="headerLinkColor"
-                                    onChange={handleApdateData}
-                                    value={dataConfig.headerLinkColor}
-                                />
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="headerLinkColor"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.headerLinkColor}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="headerLinkColor"
+                                        name="headerLinkColor"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.headerLinkColor}
+                                    />
+                                </div>
                             </strong>
                             <strong>
                                 link-color-hover:
-                                <input
-                                    type="text"
-                                    size={inputWidth}
-                                    name="headerLinkColorHover"
-                                    onChange={handleApdateData}
-                                    value={dataConfig.headerLinkColorHover}
-                                />
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="headerLinkColorHover"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.headerLinkColorHover}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="headerLinkColorHover"
+                                        name="headerLinkColorHover"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.headerLinkColorHover}
+                                    />
+                                </div>
                             </strong>
                             <strong>
                                 link-font-weight:
@@ -146,7 +743,7 @@ const AdminPanel = () => {
                                     type="text"
                                     size={inputWidth}
                                     name="linkFontWeight"
-                                    onChange={handleApdateData}
+                                    onChange={handleUpdateData}
                                     value={dataConfig.linkFontWeight}
                                 />
                             </strong>
@@ -156,7 +753,7 @@ const AdminPanel = () => {
                                     type="text"
                                     size={inputWidth}
                                     name="linkFontWeightHover"
-                                    onChange={handleApdateData}
+                                    onChange={handleUpdateData}
                                     value={dataConfig.linkFontWeightHover}
                                 />
                             </strong>
@@ -166,7 +763,7 @@ const AdminPanel = () => {
                                     type="text"
                                     size={inputWidth}
                                     name="headerLinkDecoration"
-                                    onChange={handleApdateData}
+                                    onChange={handleUpdateData}
                                     value={dataConfig.headerLinkDecoration}
                                 />
                             </strong>
@@ -176,7 +773,7 @@ const AdminPanel = () => {
                                     type="text"
                                     size={inputWidth}
                                     name="headerLinkDecorationHover"
-                                    onChange={handleApdateData}
+                                    onChange={handleUpdateData}
                                     value={dataConfig.headerLinkDecorationHover}
                                 />
                             </strong>
@@ -187,44 +784,71 @@ const AdminPanel = () => {
                                     type="text"
                                     size={inputWidth}
                                     name="listStyle"
-                                    onChange={handleApdateData}
+                                    onChange={handleUpdateData}
                                     value={dataConfig.listStyle}
                                 />
                             </strong>
                         </section>
                     </li>
-                    <li>
+                    <li className="header-config">
                         Header configuration:
                         <section className="header-configuration">
                             <strong>
                                 background-color:
-                                <input
-                                    type="text"
-                                    size={inputWidth}
-                                    name="headerBackground"
-                                    onChange={handleApdateData}
-                                    value={dataConfig.headerBackground}
-                                />
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="headerBackground"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.headerBackground}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="headerBackground"
+                                        name="headerBackground"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.headerBackground}
+                                    />
+                                </div>
                             </strong>
                             <strong>
                                 text-color:
-                                <input
-                                    type="text"
-                                    size={inputWidth}
-                                    name="headerTxtColor"
-                                    onChange={handleApdateData}
-                                    value={dataConfig.headerTxtColor}
-                                />
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="headerTxtColor"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.headerTxtColor}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="headerTxtColor"
+                                        name="headerTxtColor"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.headerTxtColor}
+                                    />
+                                </div>
                             </strong>
                             <strong>
                                 link-color:
-                                <input
-                                    type="text"
-                                    size={inputWidth}
-                                    name="headerLinkColor"
-                                    onChange={handleApdateData}
-                                    value={dataConfig.headerLinkColor}
-                                />
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="headerLinkColor"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.headerLinkColor}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="headerLinkColor"
+                                        name="headerLinkColor"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.headerLinkColor}
+                                    />
+                                </div>
                             </strong>
                             <strong>
                                 link-color-hover:
@@ -232,7 +856,7 @@ const AdminPanel = () => {
                                     type="text"
                                     size={inputWidth}
                                     name="headerLinkColorHover"
-                                    onChange={handleApdateData}
+                                    onChange={handleUpdateData}
                                     value={dataConfig.headerLinkColorHover}
                                 />
                             </strong>
@@ -242,7 +866,7 @@ const AdminPanel = () => {
                                     type="text"
                                     size={inputWidth}
                                     name="headerFontSize"
-                                    onChange={handleApdateData}
+                                    onChange={handleUpdateData}
                                     value={dataConfig.headerFontSize}
                                 />
                             </strong>
@@ -252,7 +876,7 @@ const AdminPanel = () => {
                                     type="text"
                                     size={inputWidth}
                                     name="headerFontWeight"
-                                    onChange={handleApdateData}
+                                    onChange={handleUpdateData}
                                     value={dataConfig.headerFontWeight}
                                 />
                             </strong>
@@ -262,13 +886,13 @@ const AdminPanel = () => {
                                     type="text"
                                     size={inputWidth}
                                     name="headerTextDecoration"
-                                    onChange={handleApdateData}
+                                    onChange={handleUpdateData}
                                     value={dataConfig.headerTextDecoration}
                                 />
                             </strong>
                         </section>
                     </li>
-                    <li>
+                    <li className="button-config">
                         Buttons configuration:
                         <section className="buttons-configuration">
                             <strong>
@@ -277,49 +901,85 @@ const AdminPanel = () => {
                                     type="text"
                                     size={inputWidth}
                                     name="btnPadding"
-                                    onChange={handleApdateData}
+                                    onChange={handleUpdateData}
                                     value={dataConfig.btnPadding}
                                 />
                             </strong>
                             <strong>
                                 color:
-                                <input
-                                    type="text"
-                                    size={inputWidth}
-                                    name="btnColor"
-                                    onChange={handleApdateData}
-                                    value={dataConfig.btnColor}
-                                />
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="btnColor"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.btnColor}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="btnColor"
+                                        name="btnColor"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.btnColor}
+                                    />
+                                </div>
                             </strong>
                             <strong>
                                 background-color:
-                                <input
-                                    type="text"
-                                    size={inputWidth}
-                                    name="btnBackground"
-                                    onChange={handleApdateData}
-                                    value={dataConfig.btnBackground}
-                                />
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="btnBackground"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.btnBackground}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="btnBackground"
+                                        name="btnBackground"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.btnBackground}
+                                    />
+                                </div>
                             </strong>
                             <strong>
                                 color-hover:
-                                <input
-                                    type="text"
-                                    size={inputWidth}
-                                    name="btnColorHover"
-                                    onChange={handleApdateData}
-                                    value={dataConfig.btnColorHover}
-                                />
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="btnColorHover"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.btnColorHover}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="btnColorHover"
+                                        name="btnColorHover"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.btnColorHover}
+                                    />
+                                </div>
                             </strong>
                             <strong>
                                 background-color-hover:
-                                <input
-                                    type="text"
-                                    size={inputWidth}
-                                    name="btnBackgroundHover"
-                                    onChange={handleApdateData}
-                                    value={dataConfig.btnBackgroundHover}
-                                />
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="btnBackgroundHover"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.btnBackgroundHover}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="btnBackgroundHover"
+                                        name="btnBackgroundHover"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.btnBackgroundHover}
+                                    />
+                                </div>
                             </strong>
                             <strong>
                                 font-size:
@@ -327,7 +987,7 @@ const AdminPanel = () => {
                                     type="text"
                                     size={inputWidth}
                                     name="btnFontSize"
-                                    onChange={handleApdateData}
+                                    onChange={handleUpdateData}
                                     value={dataConfig.btnFontSize}
                                 />
                             </strong>
@@ -337,7 +997,7 @@ const AdminPanel = () => {
                                     type="text"
                                     size={inputWidth}
                                     name="btnFontWeight"
-                                    onChange={handleApdateData}
+                                    onChange={handleUpdateData}
                                     value={dataConfig.btnFontWeight}
                                 />
                             </strong>
@@ -347,7 +1007,7 @@ const AdminPanel = () => {
                                     type="text"
                                     size={inputWidth}
                                     name="btnTextTransform"
-                                    onChange={handleApdateData}
+                                    onChange={handleUpdateData}
                                     value={dataConfig.btnTextTransform}
                                 />
                             </strong>
@@ -357,7 +1017,7 @@ const AdminPanel = () => {
                                     type="text"
                                     size={inputWidth}
                                     name="btnBorder"
-                                    onChange={handleApdateData}
+                                    onChange={handleUpdateData}
                                     value={dataConfig.btnBorder}
                                 />
                             </strong>
@@ -367,7 +1027,7 @@ const AdminPanel = () => {
                                     type="text"
                                     size={inputWidth}
                                     name="btnBorderRadius"
-                                    onChange={handleApdateData}
+                                    onChange={handleUpdateData}
                                     value={dataConfig.btnBorderRadius}
                                 />
                             </strong>
@@ -377,7 +1037,7 @@ const AdminPanel = () => {
                                     style={{
                                         padding: `${dataConfig.btnPadding}`,
                                         color: `${dataConfig.btnColor}`,
-                                        backgroundColor: `${dataConfig.btnBackgroundColor}`,
+                                        backgroundColor: `${dataConfig.btnBackground}`,
                                         fontSize: `${dataConfig.btnFontSize}`,
                                         fontWeight: `${dataConfig.btnFontWeight}`,
                                         textTransform: `${dataConfig.btnTextTransform}`,
@@ -404,13 +1064,255 @@ const AdminPanel = () => {
                             </div>
                         </section>
                     </li>
-                    <li>
-                        Backgrounds configuration:
-                        <section className="backgrounds-configuration"></section>
+                    <li className="home-tabs-config">
+                        Home page tabs:
+                        <div className="example-tabs">
+                            <span
+                                style={{
+                                    color: `${dataConfig.homeTabsColorHover}`,
+                                    backgroundColor: `${dataConfig.homeTabsBackgroundHover}`,
+                                    textTransform: `${dataConfig.homeTabsTextTransform}`,
+                                    fontSize: `${dataConfig.homeTabsFontSize}`,
+                                }}
+                            >
+                                active
+                            </span>
+                            <span
+                                style={{
+                                    color: `${dataConfig.homeTabsColor}`,
+                                    backgroundColor: `${dataConfig.homeTabsBackground}`,
+                                    textTransform: `${dataConfig.homeTabsTextTransform}`,
+                                    fontSize: `${dataConfig.homeTabsFontSize}`,
+                                }}
+                            >
+                                static
+                            </span>
+                            <span
+                                style={{
+                                    color: `${dataConfig.homeTabsColorHover}`,
+                                    backgroundColor: `${dataConfig.homeTabsBackgroundHover}`,
+                                    textTransform: `${dataConfig.homeTabsTextTransform}`,
+                                    fontSize: `${dataConfig.homeTabsFontSize}`,
+                                }}
+                            >
+                                hover
+                            </span>
+                        </div>
+                        <section className="home-tabs-configuration">
+                            <strong>
+                                background-color:
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="homeTabsBackground"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.homeTabsBackground}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="homeTabsBackground"
+                                        name="homeTabsBackground"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.homeTabsBackground}
+                                    />
+                                </div>
+                            </strong>
+                            <strong>
+                                color:
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="homeTabsColor"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.homeTabsColor}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="homeTabsColor"
+                                        name="homeTabsColor"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.homeTabsColor}
+                                    />
+                                </div>
+                            </strong>
+                            <strong>
+                                font-size:
+                                <input
+                                    type="text"
+                                    size={inputWidth}
+                                    name="homeTabsFontSize"
+                                    onChange={handleUpdateData}
+                                    value={dataConfig.homeTabsFontSize}
+                                />
+                            </strong>
+                            <strong>
+                                text-transform:
+                                <input
+                                    type="text"
+                                    size={inputWidth}
+                                    name="homeTabsTextTransform"
+                                    onChange={handleUpdateData}
+                                    value={dataConfig.homeTabsTextTransform}
+                                />
+                            </strong>
+                            <br />
+                            <div>Hover / Active:</div>
+                            <strong>
+                                background-color:
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="homeTabsBackgroundHover"
+                                        onChange={handleUpdateData}
+                                        value={
+                                            dataConfig.homeTabsBackgroundHover
+                                        }
+                                    />
+                                    <input
+                                        type="color"
+                                        id="homeTabsBackgroundHover"
+                                        name="homeTabsBackgroundHover"
+                                        onChange={handleUpdateData}
+                                        value={
+                                            dataConfig.homeTabsBackgroundHover
+                                        }
+                                    />
+                                </div>
+                            </strong>
+                            <strong>
+                                color:
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="homeTabsColorHover"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.homeTabsColorHover}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="homeTabsColorHover"
+                                        name="homeTabsColorHover"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.homeTabsColorHover}
+                                    />
+                                </div>
+                            </strong>
+                        </section>
                     </li>
-                    <li>
+                    <li className="footer-config">
                         Footer:
-                        <section className="footer-configuration"></section>
+                        <section className="footer-configuration">
+                            <strong>
+                                background-color:
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="footerBackground"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.footerBackground}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="footerBackground"
+                                        name="footerBackground"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.footerBackground}
+                                    />
+                                </div>
+                            </strong>
+                            <strong>
+                                text-color:
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="footerTxtColor"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.footerTxtColor}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="footerTxtColor"
+                                        name="footerTxtColor"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.footerTxtColor}
+                                    />
+                                </div>
+                            </strong>
+                            <strong>
+                                link-color:
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="footerLinkColor"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.footerLinkColor}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="footerLinkColor"
+                                        name="footerLinkColor"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.footerLinkColor}
+                                    />
+                                </div>
+                            </strong>
+                            <strong>
+                                link-color-hover:
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="footerLinkColorHover"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.footerLinkColorHover}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="footerLinkColorHover"
+                                        name="footerLinkColorHover"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.footerLinkColorHover}
+                                    />
+                                </div>
+                            </strong>
+                            <strong>
+                                font-size:
+                                <input
+                                    type="text"
+                                    size={inputWidth}
+                                    name="footerFontSize"
+                                    onChange={handleUpdateData}
+                                    value={dataConfig.footerFontSize}
+                                />
+                            </strong>
+                            <strong>
+                                font-weight:
+                                <input
+                                    type="text"
+                                    size={inputWidth}
+                                    name="footerFontWeight"
+                                    onChange={handleUpdateData}
+                                    value={dataConfig.footerFontWeight}
+                                />
+                            </strong>
+                            <strong>
+                                text-decoration:
+                                <input
+                                    type="text"
+                                    size={inputWidth}
+                                    name="footerTextDecoration"
+                                    onChange={handleUpdateData}
+                                    value={dataConfig.footerTextDecoration}
+                                />
+                            </strong>
+                        </section>
                     </li>
                 </ol>
                 <div className="buttons">
