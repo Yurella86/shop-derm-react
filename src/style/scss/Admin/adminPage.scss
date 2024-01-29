@@ -1,0 +1,238 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper-admin {
+    padding: 40px 30px;
+    font-size: 14px;
+    font-weight: 400;
+
+    h1 {
+        text-align: center;
+        font-size: 32px;
+    }
+
+    ol {
+        font-size: 12px;
+        border: 1px solid grey;
+        border-radius: 30px;
+        padding: 10px 20px;
+        display: grid;
+        grid-template-areas:
+            "a b c"
+            "d b e"
+            "f b h"
+            "g b q";
+        grid-template-columns: 1rf 1rf 1rf;
+        grid-template-rows: auto;
+
+        li {
+            font-size: 12px;
+            margin: 10px;
+        }
+
+        .accent-config {
+            grid-area: a;
+        }
+        .heading-config {
+            grid-area: b;
+        }
+        .general-config {
+            grid-area: c;
+        }
+        .header-config {
+            grid-area: d;
+        }
+        .buttons-config {
+            grid-area: e;
+        }
+        .footer-config {
+            grid-area: h;
+        }
+        .home-tabs-config {
+            grid-area: f;
+        }
+    }
+
+    input {
+        border: none;
+        outline: none;
+        padding: 0;
+        height: 50px;
+        background-color: transparent;
+    }
+
+    input[type="text"] {
+        height: auto;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    label {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1em;
+        align-items: center;
+    }
+
+    .box {
+        padding: 10px 0;
+    }
+
+    .buttons {
+        text-align: center;
+    }
+
+    .btn-admin {
+        padding: 5px 20px;
+    }
+
+    strong {
+        input[type="color"] {
+            border: none;
+            outline: none;
+            padding: 0;
+            width: 25px;
+            height: 16px;
+            background-color: transparent;
+        }
+    }
+}
+
+.header-configuration,
+.link-configuration,
+.heading-configuration,
+.buttons-configuration,
+.footer-configuration,
+.home-tabs-configuration {
+    strong {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    strong:nth-child(2n) {
+        background-color: rgba(223, 223, 223, 0.753);
+    }
+    input {
+        text-align: end;
+        height: auto;
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
+
+.accent-colors {
+    width: max-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .box {
+        max-width: 100px;
+    }
+
+    label {
+        padding-left: 2px;
+    }
+}
+
+.heading-configuration {
+    h1 {
+        text-align: start;
+    }
+    .config {
+        padding: 10px 10px;
+    }
+}
+
+.example-buttons {
+    max-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+
+    button {
+        margin: 5px 5px 0;
+    }
+}
+
+.example-tabs {
+    min-height: max-content;
+    text-align: center;
+    margin: 5px auto;
+    border-bottom: 1px solid grey;
+    span {
+        display: inline-block;
+        background-color: aqua;
+        padding: 5px 30px;
+        border: 1px solid white;
+        border-bottom: none;
+    }
+}
+
+.example-footer-wrapper {
+    .example-tagline,
+    .example-nav,
+    .example-mine,
+    .example-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+    .example-tagline {
+        min-height: 25px;
+        line-height: 25px;
+    }
+    .example-nav div {
+        padding: 0 5px;
+    }
+    .example-mine {
+        min-height: 50px;
+        align-items: center;
+
+        .icon {
+            font-size: 20px;
+            border-radius: 50%;
+        }
+
+        button {
+            border: none;
+            border-radius: 0;
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+    }
+    .example-bottom {
+        text-align: center;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .accent-colors {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media print and (max-width: 960px) {
+    .accent-colors {
+        grid-template-columns: 1fr 1fr;
+    }
+    .wrapper-admin .config input[type="color"] {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .accent-colors {
+        grid-template-columns: 1fr;
+    }
+}
+@media print and (max-width: 680px) {
+    .accent-colors {
+        grid-template-columns: 1fr;
+    }
+}
