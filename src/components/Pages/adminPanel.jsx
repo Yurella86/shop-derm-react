@@ -1,8 +1,31 @@
-import React from "react";
+import React, {useState} from "react";
 import useAdminApi from "../../store/admin/adminApi";
 
 const AdminPanel = () => {
     const {dataConfig, updateData, handleUpdateState} = useAdminApi();
+    const [isHoveredButton, setIsHoveredButton] = useState(false);
+
+    const handleMouseEnter = () => {
+        setIsHoveredButton(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsHoveredButton(false);
+    };
+
+    const defaultStyle = {
+        color: `${dataConfig.footerButton}`,
+        backgroundColor: `${dataConfig.footerButtonBackground}`,
+    };
+
+    const hoverStyle = {
+        color: `${dataConfig.footerButtonHover}`,
+        backgroundColor: `${dataConfig.footerButtonBackgroundHover}`,
+    };
+
+    const combinedStyle = isHoveredButton
+        ? {...defaultStyle, ...hoverStyle}
+        : defaultStyle;
 
     const inputWidth = 10;
 
@@ -1205,28 +1228,127 @@ const AdminPanel = () => {
                     </li>
                     <li className="footer-config">
                         Footer:
+                        <div className="example-footer-wrapper">
+                            <div
+                                className="example-tagline"
+                                style={{
+                                    color: `${dataConfig.footerTaglineColor}`,
+                                    backgroundColor: `${dataConfig.footerTaglineBackground}`,
+                                }}
+                            >
+                                <div
+                                    className="example-nav"
+                                    style={{
+                                        fontSize: `${dataConfig.taglineFontSizeBottom}`,
+                                    }}
+                                >
+                                    <div>first</div>
+                                    <div>second</div>
+                                    <div>Third</div>
+                                </div>
+                                <div className="tagline">tag line</div>
+                            </div>
+                            <div
+                                className="example-mine"
+                                style={{
+                                    color: `${dataConfig.footerTxtColor}`,
+                                    backgroundColor: `${dataConfig.footerBackground}`,
+                                }}
+                            >
+                                <div className="icons">
+                                    <span
+                                        className="icon icon-social-facebook"
+                                        style={{
+                                            color: `${dataConfig.footerIconColor}`,
+                                            backgroundColor: `${dataConfig.footerIconBackground}`,
+                                        }}
+                                    ></span>
+                                    <span
+                                        className="icon icon-social-facebook"
+                                        style={{
+                                            color: `${dataConfig.footerIconColorHover}`,
+                                            backgroundColor: `${dataConfig.footerIconBackgroundHover}`,
+                                        }}
+                                    ></span>
+                                </div>
+                                <div className="footer-btn">
+                                    <button
+                                        style={combinedStyle}
+                                        onMouseEnter={handleMouseEnter}
+                                        onMouseLeave={handleMouseLeave}
+                                    >
+                                        subscribe
+                                    </button>
+                                </div>
+                            </div>
+                            <div
+                                className="example-bottom"
+                                style={{
+                                    color: `${dataConfig.footerBottomColor}`,
+                                    backgroundColor: `${dataConfig.footerBottomBackground}`,
+                                    fontSize: `${dataConfig.footerFontSizeBottom}`,
+                                }}
+                            >
+                                © 2023 All rights reserved.
+                            </div>
+                        </div>
+                        <br />
                         <section className="footer-configuration">
                             <strong>
-                                background-color:
+                                tagline-color:
                                 <div>
                                     <input
                                         type="text"
                                         size={inputWidth}
-                                        name="footerBackground"
+                                        name="footerTaglineColor"
                                         onChange={handleUpdateData}
-                                        value={dataConfig.footerBackground}
+                                        value={dataConfig.footerTaglineColor}
                                     />
                                     <input
                                         type="color"
-                                        id="footerBackground"
-                                        name="footerBackground"
+                                        id="footerTaglineColor"
+                                        name="footerTaglineColor"
                                         onChange={handleUpdateData}
-                                        value={dataConfig.footerBackground}
+                                        value={dataConfig.footerTaglineColor}
                                     />
                                 </div>
                             </strong>
                             <strong>
-                                text-color:
+                                tagline-background:
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="footerTaglineBackground"
+                                        onChange={handleUpdateData}
+                                        value={
+                                            dataConfig.footerTaglineBackground
+                                        }
+                                    />
+                                    <input
+                                        type="color"
+                                        id="footerTaglineBackground"
+                                        name="footerTaglineBackground"
+                                        onChange={handleUpdateData}
+                                        value={
+                                            dataConfig.footerTaglineBackground
+                                        }
+                                    />
+                                </div>
+                            </strong>
+                            <strong>
+                                tagline-font-size:
+                                <input
+                                    type="text"
+                                    size={inputWidth}
+                                    name="taglineFontSizeBottom"
+                                    onChange={handleUpdateData}
+                                    value={dataConfig.taglineFontSizeBottom}
+                                />
+                            </strong>
+                            <br />
+                            <strong>
+                                footer-color:
                                 <div>
                                     <input
                                         type="text"
@@ -1245,43 +1367,191 @@ const AdminPanel = () => {
                                 </div>
                             </strong>
                             <strong>
-                                link-color:
+                                footer-background:
                                 <div>
                                     <input
                                         type="text"
                                         size={inputWidth}
-                                        name="footerLinkColor"
+                                        name="footerBackground"
                                         onChange={handleUpdateData}
-                                        value={dataConfig.footerLinkColor}
+                                        value={dataConfig.footerBackground}
                                     />
                                     <input
                                         type="color"
-                                        id="footerLinkColor"
-                                        name="footerLinkColor"
+                                        id="footerBackground"
+                                        name="footerBackground"
                                         onChange={handleUpdateData}
-                                        value={dataConfig.footerLinkColor}
+                                        value={dataConfig.footerBackground}
+                                    />
+                                </div>
+                            </strong>
+                            <br />
+                            <strong>
+                                icon-color:
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="footerIconColor"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.footerIconColor}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="footerIconColor"
+                                        name="footerIconColor"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.footerIconColor}
                                     />
                                 </div>
                             </strong>
                             <strong>
-                                link-color-hover:
+                                icon-background:
                                 <div>
                                     <input
                                         type="text"
                                         size={inputWidth}
-                                        name="footerLinkColorHover"
+                                        name="footerIconBackground"
                                         onChange={handleUpdateData}
-                                        value={dataConfig.footerLinkColorHover}
+                                        value={dataConfig.footerIconBackground}
                                     />
                                     <input
                                         type="color"
-                                        id="footerLinkColorHover"
-                                        name="footerLinkColorHover"
+                                        id="footerIconBackground"
+                                        name="footerIconBackground"
                                         onChange={handleUpdateData}
-                                        value={dataConfig.footerLinkColorHover}
+                                        value={dataConfig.footerIconBackground}
                                     />
                                 </div>
                             </strong>
+                            <strong>
+                                icon-color-hover:
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="footerIconColorHover"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.footerIconColorHover}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="footerIconColorHover"
+                                        name="footerIconColorHover"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.footerIconColorHover}
+                                    />
+                                </div>
+                            </strong>
+                            <strong>
+                                icon-background-hover:
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="footerIconBackgroundHover"
+                                        onChange={handleUpdateData}
+                                        value={
+                                            dataConfig.footerIconBackgroundHover
+                                        }
+                                    />
+                                    <input
+                                        type="color"
+                                        id="footerIconBackgroundHover"
+                                        name="footerIconBackgroundHover"
+                                        onChange={handleUpdateData}
+                                        value={
+                                            dataConfig.footerIconBackgroundHover
+                                        }
+                                    />
+                                </div>
+                            </strong>
+                            <br />
+                            <strong>
+                                button-color:
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="footerButton"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.footerButton}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="footerButton"
+                                        name="footerButton"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.footerButton}
+                                    />
+                                </div>
+                            </strong>
+                            <strong>
+                                button-background:
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="footerButtonBackground"
+                                        onChange={handleUpdateData}
+                                        value={
+                                            dataConfig.footerButtonBackground
+                                        }
+                                    />
+                                    <input
+                                        type="color"
+                                        id="footerButtonBackground"
+                                        name="footerButtonBackground"
+                                        onChange={handleUpdateData}
+                                        value={
+                                            dataConfig.footerButtonBackground
+                                        }
+                                    />
+                                </div>
+                            </strong>
+                            <strong>
+                                button-color-hover:
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="footerButtonHover"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.footerButtonHover}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="footerButtonHover"
+                                        name="footerButtonHover"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.footerButtonHover}
+                                    />
+                                </div>
+                            </strong>
+                            <strong>
+                                button-background-hover:
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="footerButtonBackgroundHover"
+                                        onChange={handleUpdateData}
+                                        value={
+                                            dataConfig.footerButtonBackgroundHover
+                                        }
+                                    />
+                                    <input
+                                        type="color"
+                                        id="footerButtonBackgroundHover"
+                                        name="footerButtonBackgroundHover"
+                                        onChange={handleUpdateData}
+                                        value={
+                                            dataConfig.footerButtonBackgroundHover
+                                        }
+                                    />
+                                </div>
+                            </strong>
+                            <br />
                             <strong>
                                 font-size:
                                 <input
@@ -1310,6 +1580,59 @@ const AdminPanel = () => {
                                     name="footerTextDecoration"
                                     onChange={handleUpdateData}
                                     value={dataConfig.footerTextDecoration}
+                                />
+                            </strong>
+                            <br />
+                            <strong>
+                                footer-bottom-color:
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="footerBottomColor"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.footerBottomColor}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="footerBottomColor"
+                                        name="footerBottomColor"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.footerBottomColor}
+                                    />
+                                </div>
+                            </strong>
+                            <strong>
+                                footer-bottom-background:
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="footerBottomBackground"
+                                        onChange={handleUpdateData}
+                                        value={
+                                            dataConfig.footerBottomBackground
+                                        }
+                                    />
+                                    <input
+                                        type="color"
+                                        id="footerBottomBackground"
+                                        name="footerBottomBackground"
+                                        onChange={handleUpdateData}
+                                        value={
+                                            dataConfig.footerBottomBackground
+                                        }
+                                    />
+                                </div>
+                            </strong>
+                            <strong>
+                                font-size-bottom:
+                                <input
+                                    type="text"
+                                    size={inputWidth}
+                                    name="footerFontSizeBottom"
+                                    onChange={handleUpdateData}
+                                    value={dataConfig.footerFontSizeBottom}
                                 />
                             </strong>
                         </section>
