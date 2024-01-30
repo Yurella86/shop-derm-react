@@ -10,7 +10,13 @@ function Header() {
 
     return (
         <div className='header-container'>
-            <div className='header-mob-container'>mob</div>
+            <div className='header-mob-container'>
+                <div className='logo-wrapper'>
+                    <Link to='/'>
+                        <img src={logo} alt="Plastic Surgery and MedSpa" />
+                    </Link>
+                </div>
+            </div>
             <div className='main-container header-desk-container'>
                 <div className='header-fl-container'>
                     <div className='hd-block left-column'>
@@ -53,9 +59,22 @@ function Header() {
                 </div>
             </div>
             <div className='main-menu'>
-                <Categories
-                    onclickItem={(name) => console.log(name)}
-                    items={category} />
+                <div className='desk-main-menu'>
+                    <Categories
+                        onclickItem={(name) => console.log(name)}
+                        items={category} />
+                </div>
+                <div className="mob-main-menu">
+                    <div className='wrapper-mob-menu'>
+                        <div className='flex-hr-container'>
+                            <div className="item">burger</div>
+                            <div className="item">search</div>
+                            <div className="item">user</div>
+                            <div className="item">compare</div>
+                            <div className="item">cart</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )

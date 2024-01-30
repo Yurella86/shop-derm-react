@@ -11,6 +11,14 @@
 
     .main-menu {
         background-color: $primary-color;
+
+        .mob-main-menu {
+            background-color: $light-color;
+
+            .wrapper-mob-menu {
+                padding: 10px 50px;
+            }
+        }
     }
 
     .header-fl-container {
@@ -134,16 +142,33 @@
             margin: 20px auto;
         }
     }
+
+    .header-mob-container {
+        background-color: $primary-color;
+        text-align: center;
+
+        .logo-wrapper {
+            padding: 20px;
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
-    .header-desk-container {
+    .header-desk-container,
+    .desk-main-menu {
         display: none;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .header-mob-container {
+    .header-mob-container,
+    .mob-main-menu {
         display: none;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .header-mob-container img {
+        width: 60%;
     }
 }

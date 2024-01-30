@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <div className='footer-container'>
             <div className='footer-top-container'>
-                <div className='main-container footer-top-flex'>
+                <div className='flex-hr-container'>
                     <div className='item item-left'>
                         <ul className='links'>
                             <li>Search Terms</li>
@@ -33,7 +33,7 @@ const Footer = () => {
                         <div className='footer-primary-right'>
                             <div className='newsletter-wrapper'>
                                 <div className='content'>
-                                    <label className='label' for="newsletter">
+                                    <label className='label' htmlFor="newsletter">
                                         <span>Sign up for news & special offers!</span>
                                     </label>
                                     <div className='field newsletter icon-mail'>

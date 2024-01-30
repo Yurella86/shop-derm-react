@@ -10,13 +10,9 @@ function MiniCart() {
     const cartCtx = useContext(CartContext)
 
     useEffect(() => {
-        if (cartCtx.items.length > 0) {
-            setIsItem(true)
-        } else {
-            setIsItem(false)
-        }
-        setCounterOfItems(cartCtx.items.length)
-    }, [cartCtx])
+        setIsItem(cartCtx.items.length > 0);
+        setCounterOfItems(cartCtx.items.length);
+    }, [cartCtx]);
 
     return (
         <div

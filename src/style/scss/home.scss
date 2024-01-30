@@ -18,24 +18,21 @@
         .tabs-state {
             width: fit-content;
             margin: 0 1px;
-            background-color: $button-bg;
+            // background-color: $button-bg;
 
             span {
                 cursor: pointer;
                 display: inline-block;
-                font-size: 16px;
                 font-weight: 400;
                 padding: 10px 15px;
                 box-sizing: border-box;
-                text-transform: uppercase;
-                color: $button-color;
             }
 
-            &:hover,
-            &.active {
-                background-color: $button-bg-hover;
-                box-shadow: 0px 0px 20px -7px $button-bg-hover;
-            }
+            // &:hover,
+            // &.active {
+            //     background-color: $button-bg-hover;
+            //     box-shadow: 0px 0px 20px -7px $button-bg-hover;
+            // }
         }
     }
 
@@ -52,6 +49,7 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    overflow-x: auto;
 
     .product-item {
         width: 140px;
@@ -59,6 +57,8 @@
         overflow: hidden;
         position: relative;
         margin: 0 10px;
+        display: flex;
+        flex-shrink: 0;
 
         .product-item-img {
             position: relative;
@@ -75,9 +75,9 @@
                 right: 3px;
                 transform: translateX(80px);
                 opacity: 0;
-                transition:
-                    all 300ms ease-in-out 0ms,
-                    opacity 440ms ease-in-out 0ms;
+                transition: all 300ms ease-in-out 0ms;
+                // opacity 440ms ease-in-out 0ms;
+                cursor: pointer;
 
                 .wish-list {
                     margin-right: 5px;
@@ -165,4 +165,20 @@
 
 .errorMessage {
     color: red;
+}
+
+@media screen and (max-width: 768px) {
+    .horizontal-tab .tabs-nav .tabs-state {
+        text-align: center;
+
+        span {
+            font-size: 12px;
+        }
+    }
+
+    .items {
+        .product-item {
+            width: 120px;
+        }
+    }
 }

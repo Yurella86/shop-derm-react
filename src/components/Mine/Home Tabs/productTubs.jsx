@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import ProductItem from '../../Products/productItem';
 import ProductContext from '../../../store/ProductApi/productContext';
 import { ThreeDots } from 'react-loader-spinner';
-import Wrong from '../../../images/something-went-wrong.webp'
+import Wrong from '../../../images/something-went-wrong.webp';
 
 
 

@@ -1,0 +1,57 @@
+.wrapper-compare-content {
+    max-width: 1170px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 50px;
+    font-size: 14px;
+    overflow-x: auto;
+
+    .flex-hr-container {
+        justify-content: center;
+        margin: 0 auto;
+        width: max-content;
+    }
+
+    .item {
+        min-width: 200px;
+        max-width: 200px;
+        position: relative;
+        min-height: 500px; // In future can be delete
+        margin: 0 2px;
+        border: 1px solid grey;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .item-wrap {
+        padding: 5px;
+    }
+
+    .title {
+        margin: 20px auto;
+    }
+
+    .price {
+        margin: 20px auto;
+    }
+
+    .article {
+        font-size: 12px;
+        margin: 20px auto;
+    }
+
+    .btn {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+
+        button {
+            margin-bottom: 5px;
+            padding: 5px 10px;
+            width: 80%;
+        }
+    }
+}
