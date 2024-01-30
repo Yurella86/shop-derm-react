@@ -5,6 +5,10 @@ const AdminPanel = () => {
     const {dataConfig, updateData, handleUpdateState} = useAdminApi();
     const [isHoveredButton, setIsHoveredButton] = useState(false);
 
+    if (!dataConfig) {
+        return <div>loading...</div>;
+    }
+
     const handleMouseEnter = () => {
         setIsHoveredButton(true);
     };
@@ -37,10 +41,6 @@ const AdminPanel = () => {
     const handleUpdateData = (e) => {
         handleUpdateState(e.target.name, e.target.value);
     };
-
-    if (!dataConfig) {
-        return <div>loading...</div>;
-    }
 
     return (
         <div className="wrapper-admin">
