@@ -5,6 +5,10 @@ const AdminPanel = () => {
     const {dataConfig, updateData, handleUpdateState} = useAdminApi();
     const [isHoveredButton, setIsHoveredButton] = useState(false);
 
+    if (!dataConfig) {
+        return <div>loading...</div>;
+    }
+
     const handleMouseEnter = () => {
         setIsHoveredButton(true);
     };
@@ -38,14 +42,10 @@ const AdminPanel = () => {
         handleUpdateState(e.target.name, e.target.value);
     };
 
-    if (!dataConfig) {
-        return <div>loading...</div>;
-    }
-
     return (
         <div className="wrapper-admin">
             <form onSubmit={handleSubmit}>
-                <h1>Admin panel</h1>
+                <h1>Admin panel Configuration</h1>
                 <ol>
                     <li className="accent-config">
                         Accent colors:
@@ -911,6 +911,184 @@ const AdminPanel = () => {
                                     name="headerTextDecoration"
                                     onChange={handleUpdateData}
                                     value={dataConfig.headerTextDecoration}
+                                />
+                            </strong>
+                        </section>
+                    </li>
+                    <li className="mine-menu-config">
+                        Mine menu configuration:
+                        <section className="menu-configuration">
+                            <div
+                                className="example-mine-menu"
+                                style={{
+                                    backgroundColor: `${dataConfig.mineMenuBackground}`,
+                                    fontSize: `${dataConfig.categoryFontSize}`,
+                                    fontWeight: `${dataConfig.categoryFontWeight}`,
+                                    // fontFamily: `${dataConfig.h1headingFontFamily}`,
+                                    textTransform: `${dataConfig.categoryTextDecoration}`,
+                                    // lineHeight: `${dataConfig.h1headingLineHeight}`,
+                                }}
+                            >
+                                <div
+                                    className="example-category"
+                                    style={{
+                                        backgroundColor: `${dataConfig.categoryBackground}`,
+                                        color: `${dataConfig.categoryColor}`,
+                                    }}
+                                >
+                                    Services
+                                </div>
+                                <div
+                                    className="example-category"
+                                    style={{
+                                        backgroundColor: `${dataConfig.categoryBackground}`,
+                                        color: `${dataConfig.categoryColor}`,
+                                    }}
+                                >
+                                    Products
+                                </div>
+                                <div
+                                    className="example-category"
+                                    style={{
+                                        backgroundColor: `${dataConfig.categoryBackground}`,
+                                        color: `${dataConfig.categoryColor}`,
+                                    }}
+                                >
+                                    GiftCard
+                                </div>
+                            </div>
+                            <br />
+                            <strong>
+                                menu-background-color:
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="mineMenuBackground"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.mineMenuBackground}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="mineMenuBackground"
+                                        name="mineMenuBackground"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.mineMenuBackground}
+                                    />
+                                </div>
+                            </strong>
+                            <br />
+                            <strong>
+                                color:
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="categoryColor"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.categoryColor}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="categoryColor"
+                                        name="categoryColor"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.categoryColor}
+                                    />
+                                </div>
+                            </strong>
+                            <strong>
+                                background-color:
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="categoryBackground"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.categoryBackground}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="categoryBackground"
+                                        name="categoryBackground"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.categoryBackground}
+                                    />
+                                </div>
+                            </strong>
+                            <br />
+                            <div>Hover / Active</div>
+                            <strong>
+                                color-hover:
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="categoryColorHover"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.categoryColorHover}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="categoryColorHover"
+                                        name="categoryColorHover"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.categoryColorHover}
+                                    />
+                                </div>
+                            </strong>
+                            <strong>
+                                background-color-hover:
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="categoryBackgroundHover"
+                                        onChange={handleUpdateData}
+                                        value={
+                                            dataConfig.categoryBackgroundHover
+                                        }
+                                    />
+                                    <input
+                                        type="color"
+                                        id="categoryBackgroundHover"
+                                        name="categoryBackgroundHover"
+                                        onChange={handleUpdateData}
+                                        value={
+                                            dataConfig.categoryBackgroundHover
+                                        }
+                                    />
+                                </div>
+                            </strong>
+
+                            <strong>
+                                font-size:
+                                <input
+                                    type="text"
+                                    size={inputWidth}
+                                    name="categoryFontSize"
+                                    onChange={handleUpdateData}
+                                    value={dataConfig.categoryFontSize}
+                                />
+                            </strong>
+                            <strong>
+                                font-weight:
+                                <input
+                                    type="text"
+                                    size={inputWidth}
+                                    name="categoryFontWeight"
+                                    onChange={handleUpdateData}
+                                    value={dataConfig.categoryFontWeight}
+                                />
+                            </strong>
+                            <strong>
+                                text-transform:
+                                <input
+                                    type="text"
+                                    size={inputWidth}
+                                    name="categoryTextDecoration"
+                                    onChange={handleUpdateData}
+                                    value={dataConfig.categoryTextDecoration}
                                 />
                             </strong>
                         </section>
