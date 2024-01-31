@@ -21,14 +21,12 @@
 
             a {
                 text-decoration: $hd-link-decoration;
-                color: $hd-link-color;
                 font-family: $ff-montserrat-ss;
                 font-weight: 600;
                 font-size: 14px;
 
                 &:hover {
                     text-decoration: $hd-link-decoration-hover;
-                    color: $hd-link-color-hover;
                 }
             }
         }

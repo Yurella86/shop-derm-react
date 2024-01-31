@@ -3,8 +3,6 @@
 // background-color: $test-bg;
 
 .header-container {
-    background-color: $test-bg;
-
     .header-desk-container {
         padding: 10px 20px;
     }
@@ -33,11 +31,9 @@
 
         .left-column {
             flex-basis: 30%;
-            background-color: $test-bg;
 
             .logo-wrapper {
                 margin: 0 auto;
-                background-color: $test-bg;
 
                 img {
                     width: 100%;
@@ -49,10 +45,8 @@
         .central-column {
             flex-basis: 25%;
             text-align: center;
-            background-color: $test-bg;
 
             .top-welcome {
-                color: $hd-txt-color;
                 font-size: 16px;
                 font-family: $ff-montserrat-ss;
             }
@@ -131,6 +125,7 @@
                 justify-content: flex-end;
                 padding-right: 10px;
                 margin-top: 10px;
+                text-decoration: none;
                 .item {
                     position: relative;
                     padding-left: 10px;

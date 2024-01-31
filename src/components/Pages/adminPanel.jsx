@@ -875,13 +875,22 @@ const AdminPanel = () => {
                             </strong>
                             <strong>
                                 link-color-hover:
-                                <input
-                                    type="text"
-                                    size={inputWidth}
-                                    name="headerLinkColorHover"
-                                    onChange={handleUpdateData}
-                                    value={dataConfig.headerLinkColorHover}
-                                />
+                                <div>
+                                    <input
+                                        type="text"
+                                        size={inputWidth}
+                                        name="headerLinkColorHover"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.headerLinkColorHover}
+                                    />
+                                    <input
+                                        type="color"
+                                        id="headerLinkColorHover"
+                                        name="headerLinkColorHover"
+                                        onChange={handleUpdateData}
+                                        value={dataConfig.headerLinkColorHover}
+                                    />
+                                </div>
                             </strong>
                             <strong>
                                 font-size:
