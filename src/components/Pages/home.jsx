@@ -9,10 +9,10 @@ const HomeContent = () => {
     const {dataConfig} = useAdminApi();
 
     if (!dataConfig) {
-        return <></>;
+        return <>loadding</>;
     }
 
-    const TabsNav = styled.li`
+    const HomeTabs = styled.li`
         background-color: ${dataConfig.homeTabsBackground};
         color: ${dataConfig.homeTabsColor};
         text-transform: ${dataConfig.homeTabsTextTransform};
@@ -30,7 +30,7 @@ const HomeContent = () => {
             <Banners />
             <section className="main-container horizontal-tab">
                 <ul className="tabs-nav">
-                    <TabsNav
+                    <HomeTabs
                         className={
                             stateTab === "bestsellers"
                                 ? "tabs-state active"
@@ -39,8 +39,8 @@ const HomeContent = () => {
                         onClick={() => setStateTab("bestsellers")}
                     >
                         <span>Bestsellers</span>
-                    </TabsNav>
-                    <TabsNav
+                    </HomeTabs>
+                    <HomeTabs
                         className={
                             stateTab === "monthsSpecials"
                                 ? "tabs-state active"
@@ -49,8 +49,8 @@ const HomeContent = () => {
                         onClick={() => setStateTab("monthsSpecials")}
                     >
                         <span>This Month's Specials</span>
-                    </TabsNav>
-                    <TabsNav
+                    </HomeTabs>
+                    <HomeTabs
                         className={
                             stateTab === "staffFavorites"
                                 ? "tabs-state active"
@@ -59,7 +59,7 @@ const HomeContent = () => {
                         onClick={() => setStateTab("staffFavorites")}
                     >
                         <span>Staff Favorites</span>
-                    </TabsNav>
+                    </HomeTabs>
                 </ul>
                 <hr />
                 {stateTab && <ProductTubs categoryTub={stateTab} />}
